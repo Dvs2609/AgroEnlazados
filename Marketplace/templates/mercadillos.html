@@ -1,0 +1,83 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load django_tables2 %}
+
+{% block content %}
+  <section class="container">
+    <h1 class="text-center">Mercadillos</h1>
+    <div class="row mt-4">
+        <div class="col-md-12 text-center ">
+            <form method="get" style="width: 50%;  margin: 0 auto;">
+                {% bootstrap_form filter.form layout='inline' %}
+                {% bootstrap_button "Filtrar" button_type="submit" button_class="custom-btn mt-2 mb-4" %}
+            </form>
+
+            {% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ page_obj.previous_page_number }}">previous</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                    <span class="page-link">previous</span>
+                    </li>
+                {% endif %}
+
+                    {% for i in paginator.page_range %}
+                    {% if i >= page_obj.number|add:-5 and i <= page_obj.number|add:5 %}
+                    {% if page_obj.number == i %}
+                    <li class="page-item active">
+                        <span class="page-link">{{ i }} <span class="sr-only">(current)</span></span>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% endif %}
+                    {% elif i == 1 %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% if page_obj.number > 11 %}
+                    <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                    </li>
+                    {% endif %}
+                    {% elif i == paginator.num_pages %}
+                    {% if page_obj.number < paginator.num_pages|add:"-10" %}
+
+                    <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                    </li>
+                    {% endif %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ page_obj.next_page_number }}">next</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                    <span class="page-link">next</span>
+                    </li>
+                {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+        <div class="col-md-12">
+            {% render_table table %}
+            
+        </div>
+    </div>
+</section>
+
+
+    {% endblock %}

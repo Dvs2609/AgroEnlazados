@@ -1,0 +1,996 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<section class="container">
+  <h1 class="text-center">Detalles del Productor</h1>
+  <div class="m-5">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        {% if current_user == object %}
+          <p class="bold-txt">Nombre: </p>
+          <p><span id="nombre_prod">{{ object.nombre_prod }}</span> <button class="border-edit-button" id="edit_nombre_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="bold-txt">ID REGEPA: </p>
+          <p><span id="id_regepa">{{ object.id_regepa }}</span> <button class="border-edit-button" id="edit_id_regepa"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="bold-txt">Correo: </p>
+          <p><span id="email_prod">{{ object.email }}</span> <button class="border-edit-button" id="edit_email_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="bold-txt">Teléfono: </p>
+          <p><span id="telefono_prod">{{ object.teléfono_prod }}</span> <button class="border-edit-button" id="edit_telefono_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="bold-txt">Código Postal: </p>
+          <p><span id="cp_prod">{{ object.cp_prod }}</span> <button class="border-edit-button" id="edit_cp_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <div class="row">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <p class="bold-txt mb-0">Productos: </p>
+                <button class="border-add-button ml-4" id="add_productos_prod" data-pk="{{ object.pk }}"><i class="fas fa-plus"></i></button>
+              </div>
+              <div id="productos_container">
+                {% for producto in object.productos_prod.all %}
+                  <p><span id="productos_prod">{{ producto.nombre }}</span> 
+                  <button class="border-delete-button" id="delete_productos_prod" data-pk="{{ object.pk }}" data-producto-id="{{ producto.id }}"><i class="fas fa-trash-alt"></i></button>
+                </p>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          {% else %}
+          <p class="bold-txt">Nombre: </p>
+          <p>{{ object.nombre_prod }}</p>
+          <p class="bold-txt">ID REGEPA: </p>
+          <p>{{ object.id_regepa }}</p>
+          <p class="bold-txt">Correo: </p>
+          <p><a href="mailto:{{ object.email }}" class="footer-link">{{ object.email }}</a></p>
+          <p class="bold-txt">Teléfono: </p>
+          <p><a href="tel:+34{{ object.teléfono_prod }}" class="footer-link">{{ object.teléfono_prod }}</a></p>
+          <p class="bold-txt">Código Postal: </p>
+          <p>{{ object.cp_prod }}</p>
+          <p class="bold-txt">Productos: </p>
+          {% for producto in object.productos_prod.all %}
+          <p>{{ producto.nombre }}</p>
+          {% endfor %}
+        {% endif %}
+      </div>
+      <div class="col-md-6 col-12">
+        {% if current_user == object %}
+          <p class="bold-txt">Tipos de venta: </p>
+          <p>
+              <span id="tipos_venta">
+                {% for tipo in direcciones_unicas %}
+                  {{ tipo.tipo_venta_name }}{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+              </span>
+          </p>
+          
+          <div class="row">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <p class="bold-txt mb-0">Tiendas: </p>
+                <button class="border-add-button ml-4" id="addTiendaBtn" data-tipo-venta-id="3"><i class="fas fa-plus"></i></button>
+              </div>
+              {% for tienda in object.tiendas_prod %}
+              <p><span id="tiendas_prod">{{ tienda }}</span> 
+                <button class="border-edit-button editDireccionBtn"
+                    data-productor-id="{{ productor.id }}"    
+                    data-direccion-id="{{ tienda.id }}"
+                    data-calle="{{ tienda.calle }}"
+                    data-numero="{{ tienda.numero }}"
+                    data-codigo-postal="{{ tienda.codigo_postal }}"
+                    data-provincia="{{ tienda.provincia }}"
+                    data-tipo-venta="{{ tienda.tipo_venta }}">
+                  <i class="fas fa-pencil-alt"></i>
+                </button><button class="border-delete-button delete-direccion-button" id="delete_tiendas_{{ tienda.id }}" data-productor-id="{{ productor.id }}">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </p>
+              {% endfor %}
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <p class="bold-txt mb-0">Dirección: </p>
+                <button class="border-add-button ml-4" id="addDireccionBtn" data-tipo-venta-id="1"><i class="fas fa-plus"></i></button>
+              </div>
+              {% for direccion in object.direcciones_prod %}
+                <p>
+                  <span id="direccion_prod">{{ direccion }}</span>
+                  <button class="border-edit-button editDireccionBtn" 
+                      data-productor-id="{{ productor.id }}"    
+                      data-direccion-id="{{ direccion.id }}"
+                      data-calle="{{ direccion.calle }}"
+                      data-numero="{{ direccion.numero }}"
+                      data-codigo-postal="{{ direccion.codigo_postal }}"
+                      data-provincia="{{ direccion.provincia }}"
+                      data-tipo-venta="{{ direccion.tipo_venta }}">
+                      <i class="fas fa-pencil-alt"></i>
+                  </button>
+                  </button><button class="border-delete-button  delete-direccion-button" id="delete_direccion_{{ direccion.id }}" data-productor-id="{{ productor.id }}">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </p>
+              {% endfor %}
+            </div>
+          </div> 
+
+          <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center">
+                    <p class="bold-txt mb-0">Ferias y Mercadillos: </p>
+                    <button class="border-add-button ml-4" id="add_ferias_mercadillos_prod" data-pk="{{ object.pk }}"><i class="fas fa-plus"></i></button>
+                </div>
+                <div id="ferias_mercadillos_container">
+                    {% for mercadillo in object.mercadillo_prod %}
+                        <p><span id="ferias_mercadillos_prod">{{ mercadillo.nombre_fm }}</span>
+                        </button><button class="border-delete-button" id="delete_mercadillo_{{ mercadillo.id_fm }}" data-productor-id="{{ productor.id }}" data-mercadillo-id="{{ mercadillo.id_fm }}">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                        </p>               
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex align-items-center">
+                    <p class="bold-txt mb-0">Link Webs: </p>
+                    <button class="border-add-button ml-4" id="add_url_button" data-pk="{{ object.pk }}"><i class="fas fa-plus"></i></button>
+                </div>
+                {% for link in object.link_webs_prod %}
+                <p>
+                    <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+                    <button class="border-delete-button delete-url-button" id="delete_link_{{ link.id }}" data-productor-id="{{ object.pk }}" data-link-id="{{ link.id }}">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </p>
+                {% endfor %}
+                <div id="url_container"></div>
+            </div>
+        </div>
+          
+          <!--<p><span id="ferias_mercadillos">{{ object.ferias_mercadillos.all|join:", " }}</span> <button class="border-edit-button" id="edit_ferias_mercadillos"><i class="fas fa-pencil-alt"></i></button></p>
+          <div class="row">
+            <div class="col">
+              <div class="d-flex align-items-center">
+                <p class="bold-txt mb-0">Link Webs: </p>
+                <button class="border-add-button ml-4" id="add_productos_prod"><i class="fas fa-plus"></i></button>
+              </div>
+              {% for link in object.link_webs_prod %}
+              <p><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
+              {% endfor %}
+            </div>
+          </div>        -->
+
+        {% else %}
+          <p class="bold-txt">Tipos de venta: </p>
+          <p>{{ object.tipos_venta.all|join:", " }}</p>
+          <p class="bold-txt">Tiendas: </p>
+          {% for tienda in object.tiendas_prod.all %}
+          <p>{{ tienda }}</p>
+          {% endfor %}
+          <p class="bold-txt">Dirección: </p>
+          {% for direccion in object.direcciones_prod.all %}
+          <p>{{ direccion }}</p>
+          {% endfor %}
+          <p class="bold-txt">Ferias y Mercadillos: </p>
+          <p>{{ object.ferias_mercadillos.all|join:", " }}</p> 
+          <p class="bold-txt">Link Webs: </p>
+          {% for link in object.link_webs_prod %}
+          <p><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  
+</section>
+<section class="encuestas-section container">
+  <div class="encuestas-container">
+    <div class="encuesta">
+      <h4>Encuesta Comunicación</h4>
+      <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#encuestaComunicacionModal">
+        Realizar Encuesta
+      </button>
+    </div>
+
+    <div class="encuesta">
+      <h4>Encuesta Registro Venta Directa</h4>
+      <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#encuestaRegistroVentaDirectaModal">
+        Realizar Encuesta
+      </button>
+    </div>
+
+    <div class="encuesta">
+      <h4>Encuesta Mercadillos</h4>
+      <button type="button" class="btn btn-primary mb-4" data-toggle="modal" data-target="#encuestaMercadillosModal">
+        Realizar Encuesta
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Encuesta Comunicación -->
+<div class="modal fade" id="encuestaComunicacionModal" tabindex="-1" role="dialog" aria-labelledby="encuestaComunicacionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="encuestaComunicacionModalLabel">Encuesta Comunicación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="encuestaComunicacionModal-form" action="{% url 'encuesta_comunicacion' %}" method="post">
+          {% csrf_token %}
+          {% for field in encuesta_comunicacion_form %}
+            <div class="form-group">
+              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
+              {{ field }}
+            </div>
+          {% endfor %}
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary submit-encuestaComunicacionModal-form">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Encuesta Registro Venta Directa -->
+<div class="modal fade" id="encuestaRegistroVentaDirectaModal" tabindex="-1" role="dialog" aria-labelledby="encuestaRegistroVentaDirectaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="encuestaRegistroVentaDirectaModalLabel">Encuesta Registro Venta Directa</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="encuestaRegistroVentaDirectaModal-form"  action="{% url 'encuesta_registro_venta_directa' %}" method="post">
+          {% csrf_token %}
+          {% for field in encuesta_registro_venta_directa_form %}
+            <div class="form-group">
+              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
+              {{ field }}
+            </div>
+          {% endfor %}
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary submit-encuestaRegistroVentaDirectaModal-form">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para la encuesta de Mercadillos -->
+<div class="modal fade" id="encuestaMercadillosModal" tabindex="-1" role="dialog" aria-labelledby="encuestaMercadillosModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="encuestaMercadillosModalLabel">Encuesta Mercadillos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="encuestaMercadillosModal-form" action="{% url 'encuesta_mercadillos' %}" method="post">
+          {% csrf_token %}
+          {% for field in encuesta_mercadillos_form %}
+            <div class="form-group">
+              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
+              {{ field }}
+            </div>
+          {% endfor %}
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary submit-encuestaMercadillosModal-form">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal para agregar dirección -->
+<div class="modal fade" id="addDireccionModal" tabindex="-1" role="dialog" aria-labelledby="addDireccionModalLabel" aria-hidden="true">  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addDireccionModalLabel">Agregar dirección</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{ add_form.as_p }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="saveAddDireccion">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para editar dirección -->
+<div class="modal fade" id="editDireccionModal" tabindex="-1" role="dialog" aria-labelledby="editDireccionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDireccionModalLabel">Editar dirección</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="productorId" value="{{ productor.id }}">
+        <!-- Aquí se cargará el formulario para editar dirección -->
+        {{ add_form2.as_p }}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="saveEditDireccion">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para eliminar dirección -->
+<div class="modal fade"  id="deleteDireccionModal" tabindex="-1" role="dialog" aria-labelledby="deleteDireccionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteDireccionModalLabel">Eliminar dirección</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar esta dirección?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmDeleteDireccion">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para eliminar mercadillo -->
+<div class="modal fade"  id="deleteMercadilloModal" tabindex="-1" role="dialog" aria-labelledby="deleteMercadilloModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteMercadilloModalLabel">Eliminar Mercadillo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar el Mercadillo?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="confirmDeleteMercadillo">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {% endblock content %}
+
+{% block extra_js %}
+<script>
+  
+  // Obtener el token CSRF
+  function getCookie(name) {
+    var cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+           if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+      }
+    }
+  }
+  return cookieValue;
+  }
+  var csrftoken = getCookie('csrftoken');
+  var currentProductorId;
+  var currentDireccionId;
+  
+  $(document).ready(function () {
+    // Manejar el evento de clic en el botón de editar dirección
+    $('.editDireccionBtn').on('click', function (event) {
+      event.preventDefault();
+
+      const direccionId = $(this).data('direccion-id');
+      $('#saveEditDireccion').data('direccion-id', direccionId);
+      const calle = $(this).data('calle');
+      const numero = $(this).data('numero');
+      const codigoPostal = $(this).data('codigo-postal');
+      const provincia = $(this).data('provincia');
+      const tipoVenta = $(this).data('tipo-venta');
+
+      const productorId = $(this).data('productor-id');
+
+      $.ajax({
+        url: `/productor/${productorId}/edit_direccion/${direccionId}/`,
+        type: 'GET',
+        dataType: 'json',
+        success: function (response) {
+          // Cargar el formulario en el modal
+          $('#editDireccionModal .modal-body').html(response.form_html);
+
+          // Rellenar los campos del formulario con los datos de la dirección
+          $('#edit_id_calle').val(calle);
+          $('#edit_id_numero').val(numero);
+          $('#edit_id_codigo_postal').val(codigoPostal);
+          $('#edit_id_provincia_id').val(provincia);
+          $('#edit_id_tipo_venta_id').val(tipoVenta);
+
+          // Mostrar el modal
+          $('#editDireccionModal').modal('show');
+          currentProductorId = $(this).data('productor-id');
+          currentDireccionId = $(this).data('direccion-id');
+        },
+        error: function (xhr, errmsg, err) {
+          // Manejar errores aquí
+        },
+      });
+    });
+
+    // Manejar el evento de clic en el botón de guardar edición de dirección
+    $('#saveEditDireccion').on('click', function (event) {
+      event.preventDefault();
+      const productorId = $('.editDireccionBtn').data('productor-id');
+      const direccionId = $(this).data('direccion-id');
+
+      $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+          xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+      });
+
+      $.ajax({
+        url: `/productor/${productorId}/edit_direccion/${direccionId}/`,
+        type: 'POST',
+        data: {
+          'calle': $('#edit_id_calle').val(),
+          'numero': $('#edit_id_numero').val(),
+          'codigo_postal': $('#edit_id_codigo_postal').val(),
+          'provincia': $('#edit_id_provincia').val(),
+          'tipo_venta': $('#edit_id_tipo_venta').val(),
+        },
+        success: function (response) {
+          if (response.status === 'ok') {
+            // Cerrar el modal
+            $('#editDireccionModal').modal('hide');
+            // Recargar la página para mostrar los cambios
+            location.reload();
+          } else {
+            console.error('Error al actualizar la dirección');
+          }
+        },
+        error: function () {
+          console.error('Error al enviar la solicitud');
+        }
+      });
+    });
+  });
+
+
+  $('#addDireccionBtn, #addTiendaBtn').click(function () {
+    try {
+      const tipoVentaId = $(this).data('tipo-venta-id');
+      $('#id_tipo_venta').val(tipoVentaId);
+      $('#id_tipo_venta').prop('readonly', true);
+      $('#addDireccionModal').modal('show');
+    } catch (error) {
+      console.error(error);
+    }
+  });
+  // Guardar nueva dirección
+  $('#saveAddDireccion').click(function () {
+      // Recopilar los datos del formulario
+      let productorId = $('#productorId').val();
+      let calle = $('#id_calle').val();
+      let numero = $('#id_numero').val();
+      let codigoPostal = $('#id_codigo_postal').val();
+      let provincia = $('#id_provincia').val();
+      let tipoVenta = $('#id_tipo_venta').val();
+      console.log("tipo venta" + tipoVenta)
+      // Enviar los datos al servidor
+      $.ajax({
+        url: '/productor/' + productorId + '/add_direccion/',
+        type: 'POST',
+        data: {
+            'calle': calle,
+            'numero': numero,
+            'codigo_postal': codigoPostal,
+            'provincia': provincia,
+            'tipo_venta': tipoVenta,
+        },
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        },
+        success: function (data) {
+            // Cerrar modal
+            $('#addDireccionModal').modal('hide');
+
+            // Mostrar mensaje de éxito
+            //alert('Dirección agregada con éxito');
+
+            // Actualizar la página
+            location.reload();
+        },
+        error: function (xhr) {
+            // Mostrar mensaje de error
+            const response = xhr.responseJSON;
+            const message = response.message || 'Error al agregar la dirección';
+            //alert(message);
+        }
+    });
+  });
+
+  $(document).ready(function () {
+      // Manejar el evento de clic en el botón de eliminar dirección
+      $('.delete-direccion-button').on('click', function (event) {
+          event.preventDefault();
+
+          const direccionId = $(this).attr('id').split('_').pop();
+          $('#confirmDeleteDireccion').data('direccion-id', direccionId);
+
+          // Mostrar el modal
+          $('#deleteDireccionModal').modal('show');
+      });
+
+      // Manejar el evento de clic en el botón de confirmar eliminación
+      $('#confirmDeleteDireccion').on('click', function (event) {
+          event.preventDefault();
+
+          const direccionId = $(this).data('direccion-id');
+          const productorId = $('#productorId').val();
+
+          $.ajaxSetup({
+              beforeSend: function(xhr, settings) {
+                  xhr.setRequestHeader("X-CSRFToken", csrftoken);
+              }
+          });
+
+          $.ajax({
+              url: `/productor/${productorId}/delete_direccion/`,
+              type: 'POST',
+              data: {
+                  'direccion_id': direccionId,
+              },
+              success: function (response) {
+                  if (response.status === 'ok') {
+                      // Cerrar el modal
+                      $('#deleteDireccionModal').modal('hide');
+                      // Recargar la página para mostrar los cambios
+                      location.reload();
+                  } else {
+                      console.error('Error al eliminar la dirección');
+                  }
+              },
+              error: function () {
+                  console.error('Error al enviar la solicitud');
+              }
+          });
+      });
+  });
+
+  $(document).ready(function() {
+      let mercadilloIdToDelete;
+      let productorIdToDelete;
+
+      // Abrir el modal cuando se haga clic en el botón de eliminación
+      $('[id^=delete_mercadillo_]').click(function() {
+          $('#deleteMercadilloModal').modal('show');
+          mercadilloIdToDelete = $(this).data('mercadillo-id');
+          productorIdToDelete = $(this).data('productor-id');
+      });
+
+      // Manejar el clic en el botón de confirmación de eliminación
+      $('#confirmDeleteMercadillo').click(function() {
+          $.ajax({
+              url: '/eliminar-mercadillo/' + productorIdToDelete + '/' + mercadilloIdToDelete + '/',
+              type: 'POST',
+              headers: {'X-CSRFToken': '{{ csrf_token }}'},
+              success: function(result) {
+                  if(result.status === 'success') {
+                      location.reload();
+                  }
+              }
+          });
+      });
+  });
+
+  function makeEditable(spanId, buttonId, updateUrl, csrfToken) {
+    console.log("makeEditable llamado: " + spanId);
+    $("#" + buttonId).click(function() {
+      console.log("Botón de edición presionado: " + buttonId);
+      let span = $("#" + spanId);
+      let currentValue = span.text();
+      let input = $("<input>", { value: currentValue });
+
+      span.empty().append(input);
+
+      input.on("change", function() {
+        console.log("Cambio en el input: " + spanId);
+        let newValue = input.val();
+        input.remove();
+        span.text(newValue);
+
+        // Actualizar el valor en el servidor usando AJAX
+        $.ajax({
+          type: "POST",
+          url: updateUrl,
+          data: {
+            new_value: newValue,
+            csrfmiddlewaretoken: csrfToken
+          },
+          success: function(response) {
+            console.log("Éxito al actualizar el valor en el servidor: " + spanId);
+          },
+          error: function(response) {
+            console.log("Error al actualizar el valor en el servidor: " + spanId);
+          }
+        });
+      });
+    });
+  }
+  document.getElementById("add_productos_prod").addEventListener("click", function () {
+      // Crea el formulario para añadir un nuevo producto
+      var form = document.createElement("form");
+      form.innerHTML = `
+      <div class="form-group">
+        <label for="nombre">Nombre del producto</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="off">
+        <div id="autocomplete-results" class="autocomplete-items"></div>
+      </div>
+      <button type="submit" id="submit-button" >Enviar</button>
+      <button type="button" id="cancel-button">Cancelar</button>
+      `;
+
+      // Agrega el formulario a la página
+      var container = document.getElementById("productos_container");
+      container.appendChild(form);
+
+      // Agrega un event listener al botón de cancelar
+      var cancelButton = document.getElementById("cancel-button");
+      cancelButton.addEventListener("click", function () {
+        container.removeChild(form);
+      });
+      // Agrega un event listener al campo de texto
+      var nombreInput = document.getElementById("nombre");
+      nombreInput.addEventListener("input", function () {
+        // Realiza la búsqueda de productos
+        var query = nombreInput.value;
+        var url = "/buscar_producto/?q=" + query;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            // Muestra los resultados en la lista desplegable
+            var autocompleteResults = document.getElementById("autocomplete-results");
+            autocompleteResults.innerHTML = "";
+
+            data.productos.forEach(function (producto) {
+              var item = document.createElement("div");
+              item.textContent = producto.nombre;
+              item.classList.add("autocomplete-item");
+
+              // Al hacer clic en un resultado, guarda el ID del producto y cierra la lista
+              item.addEventListener("click", function () {
+                nombreInput.value = producto.nombre;
+                nombreInput.setAttribute("data-producto-id", producto.id);
+                autocompleteResults.innerHTML = "";
+              });
+
+              autocompleteResults.appendChild(item);
+            });
+          });
+      });
+
+      // Cuando se envía el formulario, hace una petición POST al servidor
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var producto_nombre = document.getElementById("nombre").value;
+        var producto_id = document.getElementById("nombre").getAttribute("data-producto-id");
+        var pk = document.getElementById("add_productos_prod").getAttribute("data-pk");
+        var url = "/productor/" + pk + "/anadir_producto/";
+
+         // Verifica si el campo de producto está vacío o si no se seleccionó ningún producto de la lista
+        if (!producto_nombre || !producto_id) {
+          alert("Por favor, seleccione un producto de la lista.");
+          return;
+        }
+        var formData = new FormData(form);
+        formData.append("nombre", producto_nombre);
+        formData.append("id", producto_id);
+
+        fetch(url, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Recarga la página para mostrar el nuevo producto
+            window.location.reload();
+          });
+      });
+    });
+  document.querySelectorAll("#delete_productos_prod").forEach(btn => {
+    btn.addEventListener("click", function() {
+      var productor_pk = this.getAttribute("data-pk");
+      var producto_pk = this.getAttribute("data-producto-id");
+      var url = "/productor/" + productor_pk + "/eliminar_producto/" + producto_pk + "/";
+      var csrftoken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": csrftoken
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          // Recarga la página para mostrar el producto eliminado
+          window.location.reload();
+        } else {
+          //alert("Error al eliminar el producto");
+        }
+      });
+    });
+  });
+  makeEditable('nombre_prod', 'edit_nombre_prod', '{% url "actualizar_nombre_prod" object.pk %}', '{{ csrf_token }}');
+  makeEditable('link_webs_prod', 'edit_link_webs_prod', '{% url "actualizar_link_webs_prod" object.pk %}', '{{ csrf_token }}');
+  makeEditable('telefono_prod', 'edit_telefono_prod', '{% url "actualizar_telefono_prod" object.pk %}', '{{ csrf_token }}');
+  makeEditable('id_regepa', 'edit_id_regepa', '{% url "actualizar_id_regepa" object.pk %}', '{{ csrf_token }}');
+  makeEditable('email_prod', 'edit_email_prod', '{% url "actualizar_email_prod" object.pk %}', '{{ csrf_token }}');
+  makeEditable('cp_prod', 'edit_cp_prod', '{% url "actualizar_cp_prod" object.pk %}', '{{ csrf_token }}');
+
+  document.getElementById("add_url_button").addEventListener("click", function () {
+      // Crea el formulario para añadir una nueva URL
+      var form = document.createElement("form");
+      form.innerHTML = `
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="url" class="form-control" id="url" name="url" required>
+      </div>
+      <button type="submit" id="submit-button">Enviar</button>
+      <button type="button" id="cancel-button">Cancelar</button>
+      `;
+
+      // Agrega el formulario a la página
+      var container = document.getElementById("url_container");
+      container.appendChild(form);
+
+      // Cuando se envía el formulario, hace una petición POST al servidor
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var url = document.getElementById("url").value;
+        var pk = document.getElementById("add_url_button").getAttribute("data-pk");
+        var post_url = "/productor/" + pk + "/anadir_url/";
+
+        var formData = new FormData(form);
+        formData.append("url", url);
+
+        fetch(post_url, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            // Recarga la página para mostrar la nueva URL
+            window.location.reload();
+          });
+      });
+
+      // Agrega un event listener al botón de cancelar
+      var cancelButton = document.getElementById("cancel-button");
+      cancelButton.addEventListener("click", function () {
+        // Aquí puedes poner el código para cancelar la adición de una URL
+        // Por ejemplo, podrías remover el formulario
+        form.remove();
+      });
+  });
+
+  document.querySelectorAll(".delete-url-button").forEach(function (button) {
+      button.addEventListener("click", function () {
+          var productorId = button.getAttribute("data-productor-id");
+          var linkId = button.getAttribute("data-link-id");
+          var delete_url = "/productor/" + productorId + "/eliminar_url/";
+
+          fetch(delete_url, {
+              method: "POST",
+              body: JSON.stringify({ url_id: linkId }),
+              headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+              },
+          })
+          .then((response) => {
+              if (!response.ok) {
+                  // Si el servidor devuelve un código de estado de error, rechaza la promesa con el estado y el texto de la respuesta
+                  throw new Error(response.status + ": " + response.statusText);
+              }
+              return response.json();
+          })
+          .then((data) => {
+              if (data.status === 'success') {
+                  // Recarga la página para eliminar la URL de la lista
+                  window.location.reload();
+              } else {
+                  console.error('Error al eliminar la URL: ' + data.error);
+              }
+          })
+          .catch((error) => {
+              // Manejar los errores de red y los errores rechazados en la promesa anterior
+              console.error('Error al hacer la petición: ' + error.message);
+          });
+      });
+  });
+  
+  document.getElementById("add_ferias_mercadillos_prod").addEventListener("click", function () {
+    // Crea el formulario para añadir un nuevo feria o mercadillo
+    var form = document.createElement("form");
+    form.innerHTML = `
+    <div class="form-group">
+      <label for="nombre_mercadillo">Nombre de la feria o mercadillo</label>
+      <input type="text" class="form-control" id="nombre_mercadillo" name="nombre_mercadillo" autocomplete="off">
+      <div id="autocomplete-results-mercadillo" class="autocomplete-items"></div>
+    </div>
+    <button type="submit" id="submit-button-mercadillo">Enviar</button>
+    <button type="button" id="cancel-button-mercadillo">Cancelar</button>
+    `;
+
+    // Agrega el formulario a la página
+    var container = document.getElementById("ferias_mercadillos_container");
+    container.appendChild(form);
+
+    // Agrega un event listener al botón de cancelar
+  var cancelButton = document.getElementById("cancel-button-mercadillo");
+  cancelButton.addEventListener("click", function () {
+    container.removeChild(form);
+  });
+    // Agrega un event listener al campo de texto
+    var nombreInput = document.getElementById("nombre_mercadillo");
+    nombreInput.addEventListener("input", function () {
+        // Realiza la búsqueda de ferias y mercadillos
+        var query = nombreInput.value;
+        var pk = document.getElementById("add_ferias_mercadillos_prod").getAttribute("data-pk");
+        var url = "/productor/" + pk + "/buscar_feria_mercadillo/?q=" + query;
+
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                // Muestra los resultados en la lista desplegable
+                var autocompleteResults = document.getElementById("autocomplete-results-mercadillo");
+                autocompleteResults.innerHTML = "";
+
+                data.ferias_mercadillos.forEach(function (feria_mercadillo) {
+                    var item = document.createElement("div");
+                    item.textContent = feria_mercadillo.nombre;
+                    item.classList.add("autocomplete-item");
+
+                    // Al hacer clic en un resultado, guarda el ID de la feria o mercadillo y cierra la lista
+                    item.addEventListener("click", function () {
+                        nombreInput.value = feria_mercadillo.nombre;
+                        nombreInput.setAttribute("data-feria-mercadillo-id", feria_mercadillo.id_fm);
+                        autocompleteResults.innerHTML = "";
+                    });
+
+                    autocompleteResults.appendChild(item);
+                });
+            });
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var feria_mercadillo_nombre = document.getElementById("nombre_mercadillo").value;
+        var feria_mercadillo_id = document.getElementById("nombre_mercadillo").getAttribute("data-feria-mercadillo-id");
+
+        
+        // Verifica si el atributo data-feria-mercadillo-id tiene un valor
+        if (!feria_mercadillo_id) {
+            alert("Por favor, seleccione una feria o mercadillo de la lista desplegable.");
+            return;
+        }
+        
+        var pk = document.getElementById("add_ferias_mercadillos_prod").getAttribute("data-pk");
+        var url = "/productor/" + pk + "/anadir_feria_mercadillo/";
+
+        var data = {
+            nombre_fm: feria_mercadillo_nombre,
+            id_fm: feria_mercadillo_id
+        };
+
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": document.getElementsByName("csrfmiddlewaretoken")[0].value,
+            },
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            // Recarga la página para mostrar la nueva feria o mercadillo
+            window.location.reload();
+        });
+    });
+});
+
+  // Función para agregar la funcionalidad de autocompletado
+  function autocomplete(inp, pk) {
+    inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      var pk = document.getElementById("add_productos_prod").getAttribute("data-pk");
+      closeAllLists();
+      if (!val) { return false;}
+      a = document.createElement("div");
+      a.setAttribute("id", this.id + "-autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      this.parentNode.appendChild(a);
+      fetch("/productor/" + pk + "/buscar_producto/?q=" + val)
+      .then(response => response.json())
+      .then(data => {
+        for (i = 0; i < data.productos.length; i++) {
+          b = document.createElement("div");
+          b.innerHTML = data.productos[i].nombre;
+          b.innerHTML += "<input type='hidden' value='" + data.productos[i].id + "'>";
+          b.addEventListener("click", function(e) {
+            inp.value = this.getElementsByTagName("input")[0].value;
+            inp.setAttribute("data-producto-id", this.getElementsByTagName("input")[0].value);
+            closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      });
+    });
+
+    function closeAllLists(elmnt) {
+      var x = document.getElementsByClassName("autocomplete-items");
+      for (var i = 0; i < x.length; i++) {
+        if (elmnt != x[i] && elmnt != inp) {
+          x[i].parentNode.removeChild(x[i]);
+        }
+      }
+    }
+
+    document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+    });
+  }
+
+  // Agrega la funcionalidad de autocompletado al campo de búsqueda
+  autocomplete(document.getElementById("nombre"), pk);
+
+ 
+</script>
+{% endblock %}

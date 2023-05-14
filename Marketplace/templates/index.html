@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+<section class="container text-center" >
+  <h1>Bienvenido a la página de inicio</h1>
+  <p>Selecciona la Comunidad Autónoma y/o Provincia que deseas explorar:</p>
+  <div class="mt-5" style=" display: flex; justify-content: center;">
+  <form method="post" action="" style=" text-align: left;" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="custom-btn" type="submit">Explorar</button>
+  </form>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{
+    "ventas": [
+      {
+        "id_tipo_venta": 1,
+        "tipo_venta": "Venta de proximidad",
+        "descripcion_venta": "La venta de proximidad permite a los productores vender sus productos directamente a los consumidores sin intermediarios, en la propia explotación del productor, mercados locales o sistemas de venta en línea.",
+        "ventajas_venta": "Reduce costes de traslado e intermediación para productores; ofrece productos frescos y locales a consumidores; fomenta el desarrollo económico local.",
+        "desventajas_venta": "Requiere más tiempo y esfuerzo en la comercialización; limitaciones en cantidades y tipos de productos.",
+        "normativa_venta": "En Extremadura, se rige por el <a href='http://doe.juntaex.es/pdfs/doe/2021/580o/21040017.pdf' target='_blank'>Decreto 71/2021</a> que establece requisitos básicos de seguridad alimentaria para vender pequeñas cantidades de productos primarios sin transformar.<a href='https://www.juntaex.es/w/suministro-directo-productos-primarios' target='_blank'>[1]</a><a href='https://www.juntaex.es/documents/77055/621136/Suministro+Directo+Cartel+informativo.pdf/9a0bcd4e-68a4-20bc-494a-1b3dbe166e0a?t=1667388458479' target='_blank'>[2]</a><br><br> Existe una serie de normativas que deben cumplir todos los agricultores sin importar el tipo de distribución que vayan a realizar; estas normativas tienen que ver con la forma en la que han sido cultivados los productos, cómo son etiquetados, cómo son transportados y haciendo hincapié en los productos químicos y <a href='https://www.mapa.gob.es/es/agricultura/legislacion/ordenapa-161-2020_tcm30-536197.pdf' target='_blank'>fertilizantes</a> utilizados.<br><br>Estas normas son a nivel nacional por un lado y europeo por otro y deben seguirse al pie de la letra para evitar sanciones o riesgos alimentarios.",
+        "inscripcion_venta": "Tener una explotación inscrita en el <a href='https://www.juntaex.es/con03/registro-de-explotaciones-agrarias' target='_blank'>Registro de Explotaciones Agrarias de Extremadura</a>; cumplir con los requisitos básicos de seguridad alimentaria. <br><br>Para realizar la inscripción hay dos formas de hacerlo; desde el ordenador disponiendo un sistema de firma electrónica o a través de oficinas comarcales o entidades colaboradoras para la realización de trámites con la Consejería de Agricultura, Desarrollo Rural, Población y Territorio.<a href='https://www.juntaex.es/w/5998?inheritRedirect=true' target='_blank'>[3]</a> <br><br>Una vez inscrito en la Red de Información de Suministro Directo de Pequeñas Cantidades de Productos Primarios en Extremadura (RISDEX), se asigna un código de productor, el cual debe ser incluido en los justificantes de venta, albaranes, facturas, etc."
+      },
+      {
+        "id_tipo_venta": 2,
+        "tipo_venta": "Venta en ferias, mercadillos y de forma ambulante",
+        "descripcion_venta": "Permite a los vendedores ofrecer sus productos directamente a los consumidores sin intermediarios en mercados locales o sistemas de venta en línea.",
+        "ventajas_venta": "Reduce costes de traslado e intermediación; ofrece productos frescos y locales; fomenta el desarrollo económico local.",
+        "desventajas_venta": "Requiere más tiempo y esfuerzo en la comercialización; limitaciones en cantidades y tipos de productos.",
+        "normativa_venta": "La venta en mercadillos está regulada por la <a href='https://www.boe.es/buscar/pdf/2018/BOE-A-2018-16344-consolidado.pdf' target='_blank'>Ley 8/2018 </a> del comercio ambulante de Extremadura, y está autorizada por los Ayuntamientos en ordenanzas municipales.",
+        "inscripcion_venta": "Cumplir con los requisitos establecidos por la normativa; obtener autorización previa del ayuntamiento donde se llevará a cabo la actividad.<br><br> Los Ayuntamientos fijan el lugar de asentamiento del mercadillo y el número de puestos de venta, y tienen la potestad de conceder las autorizaciones a las personas que lo soliciten por un periodo de tiempo de 7 años. <br><br>Para ello, exigirán a los solicitantes ser autónomos y pagar el Impuesto de Actividades Económicas (IAE); además de responsabilizarse de controlar el buen estado de los alimentos que se vendan en los mercadillos. Desde AgroEnlazados proporcionamos una tabla con los mercadillos Extremeños"
+      },
+      {
+        "id_tipo_venta": 3,
+        "tipo_venta": "Venta en establecimientos locales",
+        "descripcion_venta": "Permite a los vendedores ofrecer sus productos directamente a los consumidores en tiendas físicas ubicadas en una región determinada.",
+        "ventajas_venta": "Reduce costes de traslado e intermediación; ofrece productos frescos y locales; fomenta el desarrollo económico local.",
+        "desventajas_venta": "Requiere más tiempo y esfuerzo en la comercialización; limitaciones en cantidades y tipos de productos.",
+        "normativa_venta": "En Extremadura, se rige por un decreto que regula la venta directa de pequeñas cantidades de productos agrarios a personas consumidoras o establecimientos locales de venta al por menor.",
+        "inscripcion_venta": "Cumplir con los requisitos establecidos por la normativa; obtener autorización previa del ayuntamiento donde se llevará a cabo la actividad."
+      },
+      {
+        "id_tipo_venta": 4,
+        "tipo_venta": "Venta en cooperativas",
+        "descripcion_venta": "Permite a los productores vender sus productos a través de una cooperativa, una organización formada por un grupo de personas que comparten intereses y objetivos comunes",
+        "ventajas_venta": "Acceso a una red de comercialización establecida; reduce costes de traslado e intermediación; ofrece productos frescos y locales; fomenta el desarrollo económico local.",
+        "desventajas_venta": "Requiere tiempo y esfuerzo para unirse a una cooperativa; cumplir con requisitos y normas de la cooperativa; limitaciones en cantidades y tipos de productos.",
+        "normativa_venta": "En Extremadura, se rige por la Ley 9/2018, de 30 de octubre, de sociedades cooperativas de Extremadura.",
+        "inscripcion_venta": "Buscar una cooperativa que se ajuste a las necesidades del productor; cumplir con los requisitos para convertirse en miembro, como ciertos estándares de calidad o producción."
+      },
+      {
+        "id_tipo_venta": 5,
+        "tipo_venta": "Venta online",
+        "descripcion_venta": "La venta online de productos agrícolas en Extremadura se puede realizar a través de diferentes plataformas y tiendas en línea como Agroterra o La Tienda del Agricultor.",
+        "ventajas_venta": " Permite a los agricultores llegar a un público más amplio; vender productos directamente a los consumidores; forma más rápida y cómoda de vender productos.",
+        "desventajas_venta": "Necesidad de cumplir con ciertas normativas y regulaciones para llevar a cabo la venta en línea.",
+        "normativa_venta": "Normas generales de comercialización para frutas y hortalizas frescas establecidas por normativa comunitaria; Ley 34/2002, de servicios de la sociedad de la información y del comercio electrónico.",
+        "inscripcion_venta": "Utilizar una plataforma existente o crear una tienda en línea propia; asegurarse de cumplir con todas las normativas y regulaciones aplicables."
+      }
+    ]
+}

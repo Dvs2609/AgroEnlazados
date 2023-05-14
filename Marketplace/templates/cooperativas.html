@@ -1,0 +1,143 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load django_tables2 %}
+{% block content %}
+  <section class="container text-center">
+    <h1>Cooperativas</h1>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <div class="row">
+                <form method="get" class="col-lg-6 col-sm-12">
+                    {% bootstrap_form filter.form layout='inline' %}
+                    {% bootstrap_button "Filtrar" button_type="submit" button_class="custom-btn mt-2 mb-4" %}
+                </form>
+                <!--<form method="get" class="col-md-5" style="margin-right: 80px;">
+                    <input type="text" id="search_field" placeholder="Buscar cooperativa" name="search">
+                    {% bootstrap_button "Buscar" button_type="submit" button_class="mt-2" id="search_button" name="search_button" %}
+                    <div id="map" style="height: 400px; width: 100%;"></div>
+
+                </form>-->
+                <div id="map" class="col-lg-6 col-sm-12"  style="height: 400px; width: 100%;"></div>
+                
+            </div>
+            <script>
+                var map = L.map('map');
+            
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: 'Map data &copy; OpenStreetMap contributors'
+                }).addTo(map);
+            
+                var bounds = new L.LatLngBounds();
+            
+                {% for cooperativa in page_obj %}
+                {% if cooperativa.latitude and cooperativa.longitude %}
+                    var marker = L.marker([{{ cooperativa.latitude }}, {{ cooperativa.longitude }}]).addTo(map);
+                    marker.bindPopup("<strong>{{ cooperativa.denominación_social }}</strong><br>{{ cooperativa.localidad_coop }}, {{ cooperativa.provincia_coop }}");
+                    bounds.extend(marker.getLatLng());
+                {% endif %}
+                {% endfor %}
+            
+                map.fitBounds(bounds);
+            
+                function zoomToCoop(lat, lon) {
+                    if (!isNaN(lat) && !isNaN(lon)) {
+                        map.setView([lat, lon], 14);
+                    }
+                }
+            </script>
+
+            {% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ page_obj.previous_page_number }}">previous</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                    <span class="page-link">previous</span>
+                    </li>
+                {% endif %}
+
+                    {% for i in paginator.page_range %}
+                    {% if i >= page_obj.number|add:-5 and i <= page_obj.number|add:5 %}
+                    {% if page_obj.number == i %}
+                    <li class="page-item active">
+                        <span class="page-link">{{ i }} <span class="sr-only">(current)</span></span>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% endif %}
+                    {% elif i == 1 %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% if page_obj.number > 11 %}
+                    <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                    </li>
+                    {% endif %}
+                    {% elif i == paginator.num_pages %}
+                    {% if page_obj.number < paginator.num_pages|add:"-10" %}
+
+                    <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                    </li>
+                    {% endif %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ i }}">{{ i }}</a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                    <a class="page-link" href="?{{ filter.form.cleaned_data.urlencode }}&amp;page={{ page_obj.next_page_number }}">next</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                    <span class="page-link">next</span>
+                    </li>
+                {% endif %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+        <!--<div class="col-md-12 mt-5">
+            {% with table.page as page_obj %}
+            <table id="cooperativa-table" class="table">
+                <thead>
+                <tr>
+                    {% for header in table.columns %}
+                    <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for cooperativa in cooperativas %}
+                <tr data-lat="{{ cooperativa.latitude }}" data-lon="{{ cooperativa.longitude }}" data-name="{{ cooperativa.denominación_social }}" data-location="{{ cooperativa.localidad_coop }}, {{ cooperativa.provincia_coop }}">
+                    <td>{{ cooperativa.num_inscripcion }}</td>
+                    <td>{{ cooperativa.denominación_social }}</td>
+                    <td>{{ cooperativa.provincia_coop }}</td>
+                    <td>{{ cooperativa.localidad_coop }}</td>
+                    <td>{{ cooperativa.cp_coop }}</td>
+                    <td>{{ cooperativa.grado_coop }}</td>
+                    <td>{{ cooperativa.fecha_inscripcion_coop }}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endwith %}
+        </div>    -->
+        <div class="col-md-12 mt-3">
+            {% render_table table %}
+            
+        </div>  
+    </div>
+</section>
+
+
+    {% endblock %}

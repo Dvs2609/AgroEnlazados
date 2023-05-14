@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-3">Tipos de Venta</h1>
+    <div class="row">
+        {% for venta, imagen in ventas_con_imagenes %}
+            <div class="col-md-4">
+                <div class="card mb-4"style="border-color: #1D873E;">
+                    <div class="card-body img-ventas d-flex flex-column align-items-center">
+                        <img src="{% static imagen %}" alt="{{ venta.tipo_venta }}" class="mb-3">
+                        <h5 class="card-title mt-auto text-center">{{ venta.tipo_venta }}</h5>
+                        <a href="{% url 'tipos_venta' provincia venta.id_tipo_venta %}" class="custom-btn mt-auto">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 and not forloop.last %}
+                </div>
+                <div class="row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

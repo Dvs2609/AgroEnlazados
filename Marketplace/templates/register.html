@@ -1,0 +1,94 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<!--{% for msg in messages %}
+{% if msg.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+<div class="alert alert-danger fade show" role="alert">
+	<strong>{{msg}}</strong>
+</div>
+{% endif %}
+{% endfor %}-->
+
+<!--<div class="main">
+	<div class="nav-item col-md-4 col-xs-12">
+		<form class="formularioRegistro" method="POST" action="">
+			{% csrf_token %}
+
+			<div class="navbar-brand logo-contenedor" href="#">
+				<img src="" alt="SlotsSolutions" class="logo">
+			</div>
+
+			<h2 style="text-align: center;">Registro de Usuario</h2>
+
+			<ul class="navbar-nav ml-auto distancia">
+				<li class="nav-item"><b>ID REGEPA</b></li>
+				<li class="nav-item"><input class="textfields" name="id_regepa" placeholder="Inserte su id de REGEPA"></input></li>
+				<li class="nav-item distancia"><b>DNI</b></li>
+				<li class="nav-item"><input class="textfields" name="dni_prod" placeholder="Inserte su DNI"></input></li>
+				<li class="nav-item distancia"><b>Codigo Postal</b></li>
+				<li class="nav-item"><input class="textfields" name="cp_prod" placeholder="Inserte su codigo postal"></input></li>
+				<li class="nav-item distancia"><b>Username</b></li>
+				<li class="nav-item"><input class="textfields" name="username" placeholder="Inserte su username"></input></li>
+				<li class="nav-item distancia"><b>CORREO</b></li>
+				<li class="nav-item"><input class="textfields" name="email" placeholder="Inserte su correo"></input></li>
+				<li class="nav-item distancia"><b>CONTRASEÑA</b></li>
+				<li class="nav-item"><input class="textfields" type="password" name="password" placeholder="Inserte su contraseña"></input></li>
+				<li class="nav-item"><input class="textfields distancia" type="password" name="password2" placeholder="Repita la contraseña"></input></li>
+				<li class="nav-item distancia"><input type="submit" class="botoniniciar" value="Registarse"/></li>
+				<li><p class="textoregistro imagen">Ya tienes cuenta?<a href="{% url 'login' %}">Inicia sesión aqui</a></p></li>
+			</ul>
+		</form>
+	</div>
+</div>-->
+<section class="container text-center">
+    <h2>Registro</h2>
+    <div class="form-container mt-4">
+        <form method="post" class="text-center" style="width: 50%; text-align: left; float: left; ">
+            {% csrf_token %}
+            {% for field in form %}
+			{% if field.name == "ccaa_prod" %}
+			<div class="input-container" >
+				<select name="{{ field.name }}" id="{{ field.id_for_label }}">
+					<option value="">Selecciona una comunidad autónoma</option>
+					{% for comunidad in comunidades %}
+						<option value="{{ comunidad.id }}">{{ comunidad.nombre }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			{% elif field.name == "provincia_prod" %}
+			<div class="input-container" >
+				<select name="{{ field.name }}" id="{{ field.id_for_label }}" >
+					<option value="">Selecciona una provincia</option>
+					{% for provincia in provincias %}
+						<option value="{{ provincia.id }}">{{ provincia.provincia }}</option>
+					{% endfor %}
+				</select>
+			</div>
+			
+			{% else %}
+				<div class="input-container" >
+					<input type="{{ field.field.widget.input_type }}" name="{{ field.html_name }}" id="{{ field.auto_id }}" {% if field.field.required %}required{% endif %} oninput="updateLabel(this)">
+					<label for="{{ field.auto_id }}">{{ field.label }}</label>
+				</div>
+			{% endif %}
+		{% endfor %}
+            <button class="custom-btn" type="submit">Registrarse</button>
+        </form>
+    </div>
+</section>
+{% block extra_js %}
+<script>
+    function updateLabel(input) {
+        const label = input.nextElementSibling;
+        if (input.value) {
+            label.classList.add('active');
+        } else {
+            label.classList.remove('active');
+        }
+    }
+</script>
+{% endblock extra_js %}
+{% endblock content %}
+

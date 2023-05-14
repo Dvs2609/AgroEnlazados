@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-5">{{ venta.tipo_venta }}</h1>
+    <p class="bold-txt">Descripción:</p>
+    <p>{{ venta.descripción_venta }}</p>
+    <p class="bold-txt">Ventajas: </p>
+    <p>{{ venta.ventajas_venta }}</p>
+    <p class="bold-txt">Desventajas:</p>
+    <p> {{ venta.desventajas_venta }}</p>
+    <p class="bold-txt">Normativa: </p>
+    <p>{{ venta.normativa_venta|safe }}</p>
+    <p class="bold-txt">Inscripción: </p>
+    <p>{{ venta.inscripción_venta|safe }}</p>
+    <a href="{% url 'ventas' provincia %}" class="btn btn-primary mt-3">
+        <i class="fas fa-chevron-left mr-3 "></i> Volver a Tipos de Ventas
+      </a>
+</div>
+{% endblock content %}

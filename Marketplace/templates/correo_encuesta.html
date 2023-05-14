@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% autoescape off %}
+Respuestas de la encuesta:
+
+Productor: {{ encuesta.productor.id_regepa }}
+
+{% for field, value in encuesta.get_fields %}
+    {{ field }}: {{ value }}
+{% endfor %}
+{% endautoescape %}
+{% endblock %}

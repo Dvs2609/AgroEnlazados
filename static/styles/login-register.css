@@ -1,0 +1,46 @@
+
+
+.form-container {
+	display: flex;
+	justify-content: center;
+}
+
+form {
+	width: 50%;
+}
+
+
+.input-container {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.input-container label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 16px;
+	color: #9b9b9b;
+	transition: all 0.2s ease-in-out;
+}
+
+.input-container input {
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid #9b9b9b;
+	outline: none;
+	font-size: 16px;
+	color: #333;
+}
+
+.input-container input:focus {
+	border-color: #4caf50;
+}
+
+.input-container input:focus + label,
+.input-container .active {
+	font-size: 12px;
+	color: #4caf50;
+	top: -3px;
+	transform: translateY(-100%);
+}

@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ cooperativa.denominación_social }}</h1>
+        <p><strong>Número de inscripción:</strong> {{ cooperativa.num_inscripcion }}</p>
+        <p><strong>Provincia:</strong> {{ cooperativa.provincia_coop }}</p>
+        <p><strong>Localidad:</strong> {{ cooperativa.localidad_coop }}</p>
+        <p><strong>Código postal:</strong> {{ cooperativa.cp_coop }}</p>
+        <p><strong>Grado de cooperativa:</strong> {{ cooperativa.grado_coop }}</p>
+        <p><strong>Fecha de inscripción:</strong> {{ cooperativa.fecha_inscripcion_coop }}</p>
+    </div>
+{% endblock %}

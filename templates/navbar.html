@@ -1,0 +1,71 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white mb-4">
+    <div class="container mt-3">
+        
+        {% if provincia %}
+        <a href="{% url 'inicio' request.session.provincia %}">
+        {% else %}
+        <a href="#">
+        {% endif %}
+            <img style="width: 100px;" src="{% static 'images/logo.png' %}" alt="Logo" class="navbar-brand logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            {% if view_name != 'index' and view_name != 'login' and view_name != 'registro' %}
+            {% if request.session.provincia %}
+            <div class="navbar-nav">
+                <a href="{% url 'productores' request.session.provincia %}" class="nav-item nav-link mx-2">Productores</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'cooperativas' request.session.provincia %}" class="nav-item nav-link mx-2">Cooperativas</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'ventas' request.session.provincia%}" class="nav-item nav-link mx-2">Ventas</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'mercadillos' request.session.provincia%}" class="nav-item nav-link mx-2">Mercadillos</a>
+            </div>
+            {% else %}
+            <div class="navbar-nav">
+                <a href="{% url 'productores' provincia %}" class="nav-item nav-link mx-2">Productores</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'cooperativas' provincia %}" class="nav-item nav-link mx-2">Cooperativas</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'ventas' provincia%}" class="nav-item nav-link mx-2">Ventas</a>
+            </div>
+            <div class="navbar-nav">
+                <a href="{% url 'mercadillos' provincia%}" class="nav-item nav-link mx-2">Mercadillos</a>
+            </div>
+            {% endif %}
+            {% endif %}
+            {% if request.user.is_authenticated %}
+            <div class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i> {{ request.user.email }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'perfil_productor' nombre=request.user.provincia_prod pk=request.user.pk %}">Mi perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a>
+                    </div>
+                </li>
+            </div>
+            {% else %}
+            <div class="navbar-nav ml-auto">
+                <a href="{% url 'login' %}" class="nav-item nav-link mx-2">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="navbar-nav ">
+                <a href="{% url 'registro' %}" class="btn mx-2 button-38" style="width: 110px;">Registrarse</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</nav> 

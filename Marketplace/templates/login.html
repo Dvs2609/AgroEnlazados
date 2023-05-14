@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block content %}
+
+
+<section class="container text-center">
+    <h2>Inicio de Sesión</h2>
+    <div class="form-container mt-4">
+        <form method="post"  class="text-center" style="width: 50%; text-align: left; " >
+            {% csrf_token %}
+            <div class="input-container mt-4">
+                <input type="email" name="email" id="email" required oninput="updateLabel(this)">
+                <label for="email">Correo electrónico</label>
+            </div>
+            <div class="input-container mt-2">
+                <input type="password" name="password" id="password" required oninput="updateLabel(this)">
+                <label for="password">Contraseña</label>
+            </div>
+            <button class="custom-btn mt-4" type="submit">Iniciar sesión</button>
+          </form>
+    </div>
+</section>
+{% block extra_js %}
+<script>
+    function updateLabel(input) {
+        const label = input.nextElementSibling;
+        if (input.value) {
+            label.classList.add('active');
+        } else {
+            label.classList.remove('active');
+        }
+    }
+    </script>
+    
+{% endblock extra_js %}
+{% endblock content%}

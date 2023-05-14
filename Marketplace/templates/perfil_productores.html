@@ -185,6 +185,7 @@
   </div>
   
 </section>
+{% if current_user == object %}
 <section class="encuestas-section container">
   <div class="encuestas-container">
     <div class="encuesta">
@@ -209,6 +210,7 @@
     </div>
   </div>
 </section>
+{% endif %}
 <!-- Encuesta Comunicación -->
 <div class="modal fade" id="encuestaComunicacionModal" tabindex="-1" role="dialog" aria-labelledby="encuestaComunicacionModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">

@@ -150,8 +150,9 @@ CHANNEL_LAYERS = {
 
 ASGI_APPLICATION = 'Marketplace.asgi.application'
 
-# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = 'd38df7490e64e7'
-EMAIL_HOST_PASSWORD = 'bec4052f64b782'
-EMAIL_PORT = '2525'
+EMAIL_HOST_USER = '08129dbb0bcf9e'
+EMAIL_HOST_PASSWORD = '92f2a11c998abd'
+EMAIL_PORT = 2525
+EMAIL_USE_TLS = True

@@ -22,7 +22,7 @@ from django_filters import FilterSet, CharFilter
 from django.views.generic import ListView
 from .forms import EncuestaComunicacionForm, EncuestaRegistroVentaDirectaForm, EncuestaMercadillosForm
 from .models import EncuestaComunicacion, EncuestaRegistroVentaDirecta, EncuestaMercadillos
-
+from django.core.mail import send_mail
 # Create your views here.
 
 class HomePageView(TemplateView):
@@ -153,7 +153,8 @@ class CooperativaListView(ListView):
         if search:
             queryset = queryset.filter(denominación_social__icontains=search)
 
-        return queryset
+        # Aquí ordenamos el queryset por el campo denominación_social antes de retornarlo
+        return queryset.order_by('denominación_social')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -265,10 +266,10 @@ class ProductoresListView(ListView):
         nombre = self.kwargs['nombre']
         provincia = Provincia.objects.filter(provincia=nombre).first()
         if provincia:
-            return Productor.objects.filter(provincia_prod=provincia)
+            return Productor.objects.filter(provincia_prod=provincia).order_by('nombre_prod')
         comunidad_autonoma = ComunidadAutonoma.objects.filter(nombre=nombre).first()
         if comunidad_autonoma:
-            return Productor.objects.filter(ccaa_prod=comunidad_autonoma)
+            return Productor.objects.filter(ccaa_prod=comunidad_autonoma).order_by('nombre_prod')
         return Productor.objects.none()
 
     def get_context_data(self, **kwargs):
@@ -501,10 +502,10 @@ class FeriasMercadillosListView(ListView):
         nombre = self.kwargs['nombre']
         provincia = Provincia.objects.filter(provincia=nombre).first()
         if provincia:
-            return FeriaMercadillo.objects.filter(provincia_fm=provincia)
+            return FeriaMercadillo.objects.filter(provincia_fm=provincia).order_by('nombre_fm')
         comunidad_autonoma = ComunidadAutonoma.objects.filter(nombre=nombre).first()
         if comunidad_autonoma:
-            return FeriaMercadillo.objects.filter(ccaa_fm=comunidad_autonoma)
+            return FeriaMercadillo.objects.filter(ccaa_fm=comunidad_autonoma).order_by('nombre_fm')
         return FeriaMercadillo.objects.none()
 
     def get_context_data(self, **kwargs):
@@ -689,15 +690,14 @@ class ContactView(View):
         message = request.POST.get('message')
 
         if issue_type and message:
-            # Aquí puedes manejar el mensaje de contacto. Por ejemplo, puedes enviar un correo electrónico:
             send_mail(
                 f'Mensaje de contacto - {issue_type}',
                 message,
-                'noreply@tusitio.com',  # Remitente
-                ['dvs2609@gmail.com'],  # Destinatario
+                '08129dbb0bcf9e@inbox.mailtrap.io',  # Remitente
+                ['08129dbb0bcf9e@inbox.mailtrap.io'],  # Destinatario
             )
             messages.success(request, 'Tu mensaje ha sido enviado. Gracias por contactarnos.')
         else:
             messages.error(request, 'Por favor, completa todos los campos.')
 
-        return redirect('inicio')
+        return redirect('home')

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <!-- Primera columna: formulario de contacto -->
-            <div class="col-lg-6 mb-5 mb-lg-0" >
+            <div class="col-lg-9 mb-5 mb-lg-0">
                 <h5 class="text-uppercase" style="float: center;">Contáctanos</h5>
 
                 <form method="POST" action="{% url 'contact' %}" style="float: center;">
@@ -12,25 +12,34 @@
                         <label for="issueTypeSelect">Tipo de incidencia</label>
                         <select class="form-control" id="issueTypeSelect" name="issue_type">
                             <option value="">--Selecciona una opción--</option>
-                            <option value="bug">Reportar un problema</option>
-                            <option value="suggestion">Sugerencia</option>
-                            <option value="complaint">Queja</option>
+                            <option value="reporte">Reportar un problema</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="queja">Queja</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="messageTextArea">Mensaje</label>
+                        <textarea class="form-control" id="messageTextArea" rows="3" name="message"></textarea>
+                    </div>
+                    <div id="messageBox"></div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
 
             <!-- Segunda columna: información de la empresa -->
-            <div class="col-lg-6 mt-4" >
-                  <div class="form-group">
-                    <label for="messageTextArea">Mensaje</label>
-                    <textarea class="form-control" id="messageTextArea" rows="3" name="message"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="col-lg-3 mt-4">
+                <!-- Aquí puedes agregar información adicional sobre la empresa o cualquier otro contenido que desees. -->
             </div>
         </div>
     </div>
     <div class="text-center py-3 mt-2">Copyright &copy; 2023 - AgroEnlazados</div>
-
+    
+    <script>
+        window.onload = function() {
+            {% for message in messages %}
+                var messageBox = document.getElementById('messageBox');
+                messageBox.innerHTML = "{{ message }}";
+            {% endfor %}
+        }
+    </script>
 </footer>

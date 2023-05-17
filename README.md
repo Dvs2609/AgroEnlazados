@@ -3,19 +3,24 @@
 ## Descripción del proyecto
 Breve descripción del proyecto y su propósito.
 
-## Funcionalidades principales
+## Manual de implementación
+A continuación se describe como descargar e implementar el proyecto en un nuevo dispositivo.
+
+## Manual de Usuario
+A continuación se describe el funcionamiento y las características principales de AgroEnlazados.
+
 
 ### Elección de provincia/comunidad para entrar en AgroEnlazados
-![Elección de provincia/comunidad](UserManual_images/eleccion_provincia.png)
 - Permite a los usuarios seleccionar su provincia o comunidad para acceder a información relevante según su ubicación.
+    ![Elección de provincia/comunidad](UserManual_images/eleccion_provincia.png)
 
 ### Login
-![Login](UserManual_images/login.png)
 - Permite a los usuarios iniciar sesión si ya tienen una cuenta en AgroEnlazados
+    ![Login](UserManual_images/login.png)
 
 ### Registro
-![Registro](UserManual_images/registro.png)
 - Permite a los nuevos usuarios crear una cuenta en AgroEnlazados. Necesitarán el identificador de REGEPA y el DNI para realizar el registro.
+    ![Registro](UserManual_images/registro.png)
 
 ### Inicio y redirecciones de inicio
 ![Inicio](UserManual_images/inicio.png)
@@ -37,25 +42,29 @@ Breve descripción del proyecto y su propósito.
 
 ### Tipos de venta
 - Desde la pagina de tipos de venta pueden acceder a una página como esta con informacion sobre el tipo de venta:
-    ![Venta de Proximidad](UserManual_images/Vproximidad.png)
     - Venta de Proximidad
-    ![Venta en Mercadillos](UserManual_images/Vmercadillo.png)
+    ![Venta de Proximidad](UserManual_images/Vproximidad.png)
+
     - Venta en Ferias, Mercadillos y Mercados ambulantes
+    ![Venta en Mercadillos](UserManual_images/Vmercadillo.png)
 
 ### Navbar
 
 - La barra de navegación (navbar) permite a los usuarios acceder fácilmente a diferentes secciones y funciones del sitio web.
-    ![Navbar0](UserManual_images/navbar0.png)
+    
     - Navbar pagina de eleccion de provincia, inicio y login
-    ![Navbar1](UserManual_images/navbar1.png)
+    ![Navbar0](UserManual_images/navbar0.png)
+    
     - Navbar en las demas vistas
-    ![Navbar2](UserManual_images/navbar2.png)
+    ![Navbar1](UserManual_images/navbar1.png)
+ 
     - Navbar en las demas vistas con usuario logueado
+    ![Navbar2](UserManual_images/navbar2.png)
 
 ### Filtros para tablas
-![Filtros Cooperativa](UserManual_images/filtroscoop.png)
-![Filtros Productor](UserManual_images/filtrosprod.png)
-![Filtros Mercadillos](UserManual_images/filtrosfm.png)
+![Filtros Cooperativa](UserManual_images/filtrocoop.png)
+![Filtros Productor](UserManual_images/filtroprod.png)
+![Filtros Mercadillos](UserManual_images/filtrofm.png)
 - Los filtros de tabla permiten a los usuarios refinar sus búsquedas y encontrar información específica relacionada con productos agrícolas, cooperativas, productores, ventas, etc.
 
 ### Mapa
@@ -69,28 +78,38 @@ Breve descripción del proyecto y su propósito.
 - Las secciones de productores, cooperativas y mercadillos se presentan en forma de tabla con paginación para facilitar la navegación y exploración de la información.
 
 ### Perfil del productor
-![Perfil del productor no logueado](UserManual_images/perfil_productorNL.png)
+
 - Sin iniciar sesión:
+![Perfil del productor no logueado](UserManual_images/perfil_productorNL.png)
     - Los usuarios pueden ver la información del productor y contactarlo a través de correo electrónico y teléfono.
-![Perfil del productor logueado](UserManual_images/perfil_productorL.png)
+
 - Iniciado sesión:
+![Perfil del productor logueado](UserManual_images/perfil_productorL.png)
     - Además de ver la información del productor, los usuarios pueden realizar las siguientes acciones en su propio perfil:
-        ![Editar Info](UserManual_images/editname.png)
+  
         - Editar nombre, identificación, correo electrónico, teléfono y código postal.
-        ![Añadir producto](UserManual_images/addprod.png)
+        ![Editar Info](UserManual_images/editname.png)
+
         - Añadir y eliminar productos.
-        ![Añadir dirección](UserManual_images/adddireccion.png)
+        ![Añadir producto](UserManual_images/addprod.png)
+
         - Añadir dirección y tienda (Se diferencian en que cada modal tiene default el tipo de venta que realiza).
-        ![Editar dirección](UserManual_images/editdireccion.png)
+        ![Añadir dirección](UserManual_images/adddireccion.png)
+
         - Editar dirección y tienda. Para facilitar al usuario se insertan todos las variables de ese campo para que sea mas facil la edición.
-        ![Eliminar dirección](UserManual_images/deletedireccion.png)
+        ![Editar dirección](UserManual_images/editdireccion.png)
+
         - Eliminar dirección y tienda.
-        ![Añadir mercadillo](UserManual_images/addfm.png)
+         ![Eliminar dirección](UserManual_images/deletedireccion.png)
+
         - Añadir y eliminar ferias y mercadillos.
-        ![Añadir url](UserManual_images/addurl.png)
+        ![Añadir mercadillo](UserManual_images/addfm.png)
+
         - Añadir links de webs.
-        ![Encuesta1](UserManual_images/encuesta.png)
+        ![Añadir url](UserManual_images/addurl.png)
+
         - Ejemplo de encuestaa.
+        ![Encuesta1](UserManual_images/encuesta.png)
 
 ### Footer
 ![Footer](UserManual_images/footer.png)

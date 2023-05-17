@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py migrate && python manage.py loaddata datadump_utf8.json && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment: 
+      - DB_HOST=db
+      - DB_NAME=marketplace_db
+      - DB_USER=postgres
+      - DB_PASSWORD=51132624
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14.3
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=51132624
+      - POSTGRES_DB=marketplace_db
+    ports:
+      - 5432:5432
+
+volumes:
+  postgres_data:

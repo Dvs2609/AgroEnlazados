@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-2%(xf5q8b*w@e8l!nqi5y*l+@zp=%jboe7&6vy0on#!9e^-=_2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Application definition
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django_extensions',
     'django_tables2',
     'bootstrap4',
-    'channels',
 ]
 
 MIDDLEWARE = [
@@ -82,18 +81,26 @@ WSGI_APPLICATION = "AgroEnlazados.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'marketplace_db',
         'USER': 'postgres',
         'PASSWORD': '51132624',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -139,16 +146,7 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
-
-ASGI_APPLICATION = 'Marketplace.asgi.application'
+ASGI_APPLICATION = 'AgroEnlazados.asgi.application'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'

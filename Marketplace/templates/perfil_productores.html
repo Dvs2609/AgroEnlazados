@@ -8,15 +8,15 @@
       <div class="col-md-6 col-12">
         {% if current_user == object %}
           <p class="bold-txt">Nombre: </p>
-          <p><span id="nombre_prod">{{ object.nombre_prod }}</span> <button class="border-edit-button" id="edit_nombre_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="ml-2"><span id="nombre_prod">{{ object.nombre_prod }}</span> <button class="border-edit-button" id="edit_nombre_prod"><i class="fas fa-pencil-alt"></i></button></p>
           <p class="bold-txt">ID REGEPA: </p>
-          <p><span id="id_regepa">{{ object.id_regepa }}</span> <button class="border-edit-button" id="edit_id_regepa"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="ml-2"><span id="id_regepa">{{ object.id_regepa }}</span> <button class="border-edit-button" id="edit_id_regepa"><i class="fas fa-pencil-alt"></i></button></p>
           <p class="bold-txt">Correo: </p>
-          <p><span id="email_prod">{{ object.email }}</span> <button class="border-edit-button" id="edit_email_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="ml-2"><span id="email_prod">{{ object.email }}</span> <button class="border-edit-button" id="edit_email_prod"><i class="fas fa-pencil-alt"></i></button></p>
           <p class="bold-txt">Teléfono: </p>
-          <p><span id="telefono_prod">{{ object.teléfono_prod }}</span> <button class="border-edit-button" id="edit_telefono_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="ml-2"><span id="telefono_prod">{{ object.teléfono_prod }}</span> <button class="border-edit-button" id="edit_telefono_prod"><i class="fas fa-pencil-alt"></i></button></p>
           <p class="bold-txt">Código Postal: </p>
-          <p><span id="cp_prod">{{ object.cp_prod }}</span> <button class="border-edit-button" id="edit_cp_prod"><i class="fas fa-pencil-alt"></i></button></p>
+          <p class="ml-2"><span id="cp_prod">{{ object.cp_prod }}</span> <button class="border-edit-button" id="edit_cp_prod"><i class="fas fa-pencil-alt"></i></button></p>
           <div class="row">
             <div class="col">
               <div class="d-flex align-items-center">
@@ -25,7 +25,7 @@
               </div>
               <div id="productos_container">
                 {% for producto in object.productos_prod.all %}
-                  <p><span id="productos_prod">{{ producto.nombre }}</span> 
+                  <p class="ml-2"><span id="productos_prod">{{ producto.nombre }}</span> 
                   <button class="border-delete-button" id="delete_productos_prod" data-pk="{{ object.pk }}" data-producto-id="{{ producto.id }}"><i class="fas fa-trash-alt"></i></button>
                 </p>
                 {% endfor %}
@@ -35,25 +35,27 @@
 
           {% else %}
           <p class="bold-txt">Nombre: </p>
-          <p>{{ object.nombre_prod }}</p>
+          <p class="ml-2">{{ object.nombre_prod }}</p>
           <p class="bold-txt">ID REGEPA: </p>
-          <p>{{ object.id_regepa }}</p>
+          <p class="ml-2">{{ object.id_regepa }}</p>
           <p class="bold-txt">Correo: </p>
-          <p><a href="mailto:{{ object.email }}" class="footer-link">{{ object.email }}</a></p>
+          <p class="ml-2"><a href="mailto:{{ object.email }}" class="footer-link">{{ object.email }}</a></p>
           <p class="bold-txt">Teléfono: </p>
-          <p><a href="tel:+34{{ object.teléfono_prod }}" class="footer-link">{{ object.teléfono_prod }}</a></p>
+          <p class="ml-2"><a href="tel:+34{{ object.teléfono_prod }}" class="footer-link">{{ object.teléfono_prod }}</a></p>
           <p class="bold-txt">Código Postal: </p>
-          <p>{{ object.cp_prod }}</p>
-          <p class="bold-txt">Productos: </p>
-          {% for producto in object.productos_prod.all %}
-          <p>{{ producto.nombre }}</p>
-          {% endfor %}
+          <p class="ml-2">{{ object.cp_prod }}</p>
+          {% if object.productos_prod.all %}
+            <p class="bold-txt">Productos: </p>
+            {% for producto in object.productos_prod.all %}
+            <p class="ml-2">{{ producto.nombre }}</p>
+            {% endfor %}
+            {% endif %}
         {% endif %}
       </div>
       <div class="col-md-6 col-12">
         {% if current_user == object %}
           <p class="bold-txt">Tipos de venta: </p>
-          <p>
+          <p class="ml-2">
               <span id="tipos_venta">
                 {% for tipo in direcciones_unicas %}
                   {{ tipo.tipo_venta_name }}{% if not forloop.last %}, {% endif %}
@@ -68,7 +70,7 @@
                 <button class="border-add-button ml-4" id="addTiendaBtn" data-tipo-venta-id="3"><i class="fas fa-plus"></i></button>
               </div>
               {% for tienda in object.tiendas_prod %}
-              <p><span id="tiendas_prod">{{ tienda }}</span> 
+              <p class="ml-2"><span id="tiendas_prod">{{ tienda }}</span> 
                 <button class="border-edit-button editDireccionBtn"
                     data-productor-id="{{ productor.id }}"    
                     data-direccion-id="{{ tienda.id }}"
@@ -87,13 +89,13 @@
           </div> 
 
           <div class="row">
-            <div class="col">
+            <div class="col"> 
               <div class="d-flex align-items-center">
                 <p class="bold-txt mb-0">Dirección: </p>
                 <button class="border-add-button ml-4" id="addDireccionBtn" data-tipo-venta-id="1"><i class="fas fa-plus"></i></button>
               </div>
               {% for direccion in object.direcciones_prod %}
-                <p>
+                <p class="ml-2">
                   <span id="direccion_prod">{{ direccion }}</span>
                   <button class="border-edit-button editDireccionBtn" 
                       data-productor-id="{{ productor.id }}"    
@@ -121,7 +123,7 @@
                 </div>
                 <div id="ferias_mercadillos_container">
                     {% for mercadillo in object.mercadillo_prod %}
-                        <p><span id="ferias_mercadillos_prod">{{ mercadillo.nombre_fm }}</span>
+                        <p class="ml-2"><span id="ferias_mercadillos_prod">{{ mercadillo.nombre_fm }}</span>
                         </button><button class="border-delete-button" id="delete_mercadillo_{{ mercadillo.id_fm }}" data-productor-id="{{ productor.id }}" data-mercadillo-id="{{ mercadillo.id_fm }}">
                           <i class="fas fa-trash-alt"></i>
                         </button>
@@ -138,7 +140,7 @@
                     <button class="border-add-button ml-4" id="add_url_button" data-pk="{{ object.pk }}"><i class="fas fa-plus"></i></button>
                 </div>
                 {% for link in object.link_webs_prod %}
-                <p>
+                <p class="ml-2">
                     <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
                     <button class="border-delete-button delete-url-button" id="delete_link_{{ link.id }}" data-productor-id="{{ object.pk }}" data-link-id="{{ link.id }}">
                         <i class="fas fa-trash-alt"></i>
@@ -149,36 +151,34 @@
             </div>
         </div>
           
-          <!--<p><span id="ferias_mercadillos">{{ object.ferias_mercadillos.all|join:", " }}</span> <button class="border-edit-button" id="edit_ferias_mercadillos"><i class="fas fa-pencil-alt"></i></button></p>
-          <div class="row">
-            <div class="col">
-              <div class="d-flex align-items-center">
-                <p class="bold-txt mb-0">Link Webs: </p>
-                <button class="border-add-button ml-4" id="add_productos_prod"><i class="fas fa-plus"></i></button>
-              </div>
-              {% for link in object.link_webs_prod %}
-              <p><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
-              {% endfor %}
-            </div>
-          </div>        -->
 
         {% else %}
-          <p class="bold-txt">Tipos de venta: </p>
-          <p>{{ object.tipos_venta.all|join:", " }}</p>
-          <p class="bold-txt">Tiendas: </p>
-          {% for tienda in object.tiendas_prod.all %}
-          <p>{{ tienda }}</p>
-          {% endfor %}
-          <p class="bold-txt">Dirección: </p>
-          {% for direccion in object.direcciones_prod.all %}
-          <p>{{ direccion }}</p>
-          {% endfor %}
-          <p class="bold-txt">Ferias y Mercadillos: </p>
-          <p>{{ object.ferias_mercadillos.all|join:", " }}</p> 
-          <p class="bold-txt">Link Webs: </p>
-          {% for link in object.link_webs_prod %}
-          <p><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
-          {% endfor %}
+        {% if object.tipos_venta.all %}
+            <p class="bold-txt">Tipos de venta: </p>
+            <p class="ml-2">{{ object.tipos_venta.all|join:", " }}</p>
+        {% endif %}
+        {% if object.tiendas_prod.all %}
+            <p class="bold-txt">Tiendas: </p>
+            {% for tienda in object.tiendas_prod.all %}
+            <p class="ml-2">{{ tienda }}</p>
+            {% endfor %}
+        {% endif %}
+        {% if object.direcciones_prod.all %}
+            <p class="bold-txt">Dirección: </p>
+            {% for direccion in object.direcciones_prod.all %}
+            <p class="ml-2">{{ direccion }}</p>
+            {% endfor %}
+        {% endif %}
+        {% if object.ferias_mercadillos.all %}
+            <p class="bold-txt">Ferias y Mercadillos: </p>
+            <p class="ml-2">{{ object.ferias_mercadillos.all|join:", " }}</p>
+        {% endif %}
+        {% if object.link_webs_prod %}
+            <p class="bold-txt">Link Webs: </p>
+            {% for link in object.link_webs_prod %}
+            <p class="ml-2"><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
+            {% endfor %}
+        {% endif %}
         {% endif %}
       </div>
     </div>
@@ -990,8 +990,7 @@
     });
   }
 
-  // Agrega la funcionalidad de autocompletado al campo de búsqueda
-  autocomplete(document.getElementById("nombre"), pk);
+
 
  
 </script>

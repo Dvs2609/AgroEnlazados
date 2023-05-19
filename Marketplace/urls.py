@@ -4,10 +4,8 @@ from .views import HomePageView, CooperativaListView, ProductoresListView, Produ
 from django.views.decorators.csrf import csrf_exempt
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name="home"),
-    
+    path('', HomePageView.as_view(), name="home"), 
     path('login/', views.iniciarSesion, name="login"),
-    #path('registro/', views.registrarse, name="registro"),
     path('registro/', ProductorRegistrationView.as_view(), name='registro'),
     path('logout/', views.logoutUser, name="logout"),
     path('contacto/', ContactView.as_view(), name='contact'),

@@ -52,8 +52,9 @@ class LoginForm(AuthenticationForm):
         fields = ['email', 'password1']
 
 class FiltroIndex(forms.Form):
-    comunidad_autonoma = forms.ModelChoiceField(queryset=ComunidadAutonoma.objects.all(), required=False, label="Comunidad Autónoma")
-    provincia = forms.ModelChoiceField(queryset=Provincia.objects.all(), required=False, label="Provincia")
+    comunidad_autonoma = forms.ModelChoiceField(queryset=ComunidadAutonoma.objects.all(), required=False, label="Comunidad Autónoma", widget=forms.Select(attrs={'class': 'my-style'}))
+    provincia = forms.ModelChoiceField(queryset=Provincia.objects.all(), required=False, label="Provincia", widget=forms.Select(attrs={'class': 'my-style'}))
+
 
 class EncuestaComunicacionForm(forms.Form):
     frecuencia_uso = forms.ChoiceField(choices=(('a', 'Diariamente'), ('b', 'Semanalmente'), ('c', 'Mensualmente'), ('d', 'Menos de una vez al mes'), ('e', 'Nunca')), label='¿Con qué frecuencia utilizas la plataforma de comunicación entre productores?')

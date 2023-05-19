@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             <!-- Primera columna: formulario de contacto -->
-            <div class="col-lg-9 mb-5 mb-lg-0">
+            <div class="col-lg-9 col-sm-12 mb-5 mb-lg-0">
                 <h5 class="text-uppercase" style="float: center;">Contáctanos</h5>
 
-                <form method="POST" action="{% url 'contact' %}" style="float: center;">
+                <form method="POST" action="{% url 'contact' %}" style="float: center; width: 100%;">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="issueTypeSelect">Tipo de incidencia</label>
@@ -27,7 +27,7 @@
             </div>
 
             <!-- Segunda columna: información de la empresa -->
-            <div class="col-lg-3 mt-4">
+            <div class="col-lg-3 col-sm-12 mt-4">
                 <!-- Aquí puedes agregar información adicional sobre la empresa o cualquier otro contenido que desees. -->
             </div>
         </div>

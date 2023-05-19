@@ -3,6 +3,13 @@ body {
   }
 
 
+/*INDEX*/
+.style-form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*FIN INDEX*/
+
 /* INICIO*/
 .link-container {
     position: relative;
@@ -24,6 +31,7 @@ body {
     display: block;
     margin-top: 20px;
 }
+
 /* FIN INICIO */
 
 
@@ -148,7 +156,7 @@ th a {
 /*PERFIL*/
 .encuestas-section {
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #fff;
   }
   
   .encuestas-container {

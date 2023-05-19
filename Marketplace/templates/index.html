@@ -2,15 +2,26 @@
 
 {% load static %}
 {% block content %}
-<section class="container text-center" >
+<section class="container text-center">
   <h1>Bienvenido a la página de inicio</h1>
   <p>Selecciona la Comunidad Autónoma y/o Provincia que deseas explorar:</p>
-  <div class="mt-5" style=" display: flex; justify-content: center;">
-  <form method="post" action="" style=" text-align: left;" >
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="custom-btn" type="submit">Explorar</button>
-  </form>
-</div>
+  <div class="mt-5 form-container">
+    <form method="post" id="myForm">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="custom-btn" id="explorar-btn" type="submit">Explorar</button>
+    </form>
+  </div>
 </section>
+
+<script>
+  document.getElementById('myForm').addEventListener('submit', function(e) {
+    var comunidad_autonoma = document.getElementById("id_comunidad_autonoma");
+    var provincia = document.getElementById("id_provincia");
+    if(comunidad_autonoma.value === "" && provincia.value === "") {
+        e.preventDefault(); // Evita la presentación del formulario
+        alert("Por favor selecciona al menos una opción."); // Muestra un mensaje de error
+    }
+  });
+</script>
 {% endblock %}

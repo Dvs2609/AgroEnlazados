@@ -200,6 +200,7 @@ class ProductorRegistrationView(FormView):
         context = super().get_context_data(**kwargs)
         context['provincias'] = Provincia.objects.all()
         context['comunidades'] = ComunidadAutonoma.objects.all()
+        context['view_name'] = 'registro'
         return context
 
     def form_valid(self, form):

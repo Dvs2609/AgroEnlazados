@@ -6,7 +6,7 @@
         {% if provincia %}
         <a href="{% url 'inicio' request.session.provincia %}">
         {% else %}
-        <a href="#">
+        <a href="{% url 'home' %}">
         {% endif %}
             <img style="width: 100px;" src="{% static 'images/logo.png' %}" alt="Logo" class="navbar-brand logo-img">
         </a>
@@ -44,26 +44,38 @@
             {% endif %}
             {% endif %}
             {% if request.user.is_authenticated %}
-            <div class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-user"></i> {{ request.user.email }}
+                <div class="navbar-nav ml-auto d-none d-lg-block"> <!-- versión de escritorio -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i> {{ request.user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{% url 'perfil_productor' nombre=request.user.provincia_prod pk=request.user.pk %}">Mi perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </div>
+
+                <div class="navbar-nav ml-auto d-block d-lg-none "> <!-- versión móvil -->
+                    <a class="nav-link ml-2 bold-txt" href="{% url 'perfil_productor' nombre=request.user.provincia_prod pk=request.user.pk %}">
+                        Mi perfil <i class="fas fa-user"></i> 
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{% url 'perfil_productor' nombre=request.user.provincia_prod pk=request.user.pk %}">Mi perfil</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a>
-                    </div>
-                </li>
-            </div>
+                    <a class="nav-link ml-2" href="{% url 'logout' %}">Cerrar sesión</a>
+                </div>
             {% else %}
-            <div class="navbar-nav ml-auto">
+            <div class="navbar-nav ml-auto d-none d-lg-block">
                 <a href="{% url 'login' %}" class="nav-item nav-link mx-2">
-                    <i class="fas fa-user"></i>
+                 <i class="fas fa-user "></i>
+                </a>
+            </div>
+            <div class="navbar-nav ml-auto d-block d-lg-none">
+                <a href="{% url 'login' %}" class="nav-item nav-link mx-2">
+                 Iniciar Sesión <i class="fas fa-user ml-3 "></i>
                 </a>
             </div>
             <div class="navbar-nav ">
-                <a href="{% url 'registro' %}" class="btn mx-2 button-38" style="width: 110px;">Registrarse</a>
+                <a href="{% url 'registro' %}" class="btn mx-2 button-38 mr-5" style="width: 110px;">Registrarse</a>
             </div>
             {% endif %}
         </div>

@@ -1,853 +1,1421 @@
 [
     {
-     "Nombre": "Mercadillo de Cáceres",
-     "Dia de Mercadillo": "Miércoles",
-     "Tipo": "Generalista",
-     "Ubicación": "Calle Fausto Picapiedra, 7",
-     "Horario": "De 9:00 a 14:00",
-     "Puestos": 250,
-     "Descripcion": "Mercadillo de los Lunes en Caceres",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Guadalupe",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Calle Mayor",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Almaraz",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Calle Miguel de Cervantes",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Montehermoso",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Montehermoso",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Valencia de Alcántara",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Gata",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Valdefuentes",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Almoharín",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Brozas",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza Príncipe de Asturias",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Madroñera",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de Abastos",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Losar de la Vera",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Losar de la Vera",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Malpartida de Cáceres,",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de la Nora",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Plasencia",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Avenida de la Hispanidad",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Caminomorisco",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Caminomorisco",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Pizarra",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza de la Hispanidad",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Guadalupe",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Mayor",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Miajadas",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Cervantes",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Campo Lugar",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Garrovillas de Alconétar",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Cáceres",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Santo Tomás de Aquino",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Carcaboso",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Jerte",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de la Independencia",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Aliseda",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de Extremadura",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Cáceres",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Ronda del Carmen",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Cañamero",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de Santo Domingo",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Casar de Palomero",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza Mayor",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Valverde del Fresno",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle Ermita del Espíritu Santo",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Trujillo",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle Fernán Ruiz",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Villanueva de la Vera",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle San Justo",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Pizarra",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de la Hispanidad",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Valdefuentes",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Alcuéscar",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle San Juan",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Cabezuela del Valle",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de la Extremadura",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Madrigalejo",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle Encobradero",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Jarandilla de la Vera",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Jarandilla de la Vera",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Navas del Madroño",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Pinofranqueado",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle del Obispo Jarrín",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Sierra de Fuentes",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Zarza la Mayor",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza Mayor",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Pizarra",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de la Hispanidad",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Miajadas",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Cervantes",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Campo Lugar",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Moraleja",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Ronda del Foso",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Hervás",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Jesús Sánchez Rodríguez",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Madrigal de la Vera",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle del Cerrillo",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Montánchez",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Amador Díaz",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Cáceres",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Aldea Moret",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Valdesalor",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Casatejada",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de la Alameda",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Serradilla",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Ahigal",
-     "Dia de Mercadillo": "Domingo",
-     "Ubicación": "Plaza Mayor",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Malpartida de Plasencia",
-     "Dia de Mercadillo": "Domingo",
-     "Ubicación": "Paseo de Extremadura",
-     "Comunidad": "Extremadura",
-     "Provincia": "CACERES"
-    },
-    {
-     "Nombre": "Mercadillo de Puebla de la Calzada",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Recinto Ferial",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Oliva de la Frontera",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Recinto Ferial",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Medina de las Torres",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Calle Cristo",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Talavera la Real",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Paseo Virgen de Gracia",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Valdecaballeros",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Valdecaballeros",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Valle de la Serena",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Arroyo de San Serván",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Entre campo de deportes y piscina",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Don Benito",
-     "Dia de Mercadillo": "Lunes",
-     "Ubicación": "Avenida Alonso Martín",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Burguillos del Cerro",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de Abastos",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Talarrubias",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Calle La Paz",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Badajoz",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Puente Real",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Quintana de la Serena",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Recinto Ferial",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Fregenal de la Sierra",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Calle Orihuela Grande",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Calañas",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "La Zarza",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Montemolín",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Campanario",
-     "Dia de Mercadillo": "Martes",
-     "Ubicación": "Camino de la Laguna",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Mirandilla",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Reina Sofía",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Guareña",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Guareña",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Bienvenida",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Altozano",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Valverde de Leganés",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza Antonio Asensio Romero",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Jerez de los Caballeros",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Plaza de Santiago",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Garbayuela",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Garbayuela",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Alange",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Calle Castillejo",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Fuenlabrada de los Montes",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Paseo de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de La Haba",
-     "Dia de Mercadillo": "Miércoles",
-     "Ubicación": "Avenida de Extremadura",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Salvaleón",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de Leganés",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Montijo",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Avenida Europa",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Cabeza del Buey",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de San Vicente",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Medellín",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Medellín",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Campillo de Llerena",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de Abastos",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Casas de Don Pedro",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza Sagrado Corazón de Jesús",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Montemolín",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Usagre",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle Rodríguez de la Fuente",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Llerena",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle del Arrabal de San Francisco",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Castuera",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Parque Félix Rodríguez de la Fuente",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de La Albuera",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Avenida General Castaño",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Higuera la Real",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Avenida de Portugal",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de San Pedro de Mérida",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle Las Peñas",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de La Nava de Santiago",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Calle de Enmedio",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Berlanga",
-     "Dia de Mercadillo": "Jueves",
-     "Ubicación": "Plaza del mercado de abastos",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Talarrubias",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle La Paz",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Calañas",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "La Zarza",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Santa Marta de los Barros",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Recinto Ferial",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Cabeza la Vaca",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Carretera de Calera de León",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Montemolín",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Navalvillar de Pela",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza del Emigrante",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Azuaga",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Azuaga",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Ribera del Fresno",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle de la Fuente",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de La Roca de la Sierra",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Almendralejo",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Calle El Salvador",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Santa Amalia",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Avenida de Valdehornillo",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Segura de León",
-     "Dia de Mercadillo": "Viernes",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Salvaleón",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de Leganés",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Burguillos del Cerro",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de Abastos",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Mirandilla",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Reina Sofía",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de San Vicente de Alcántara",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Parque de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Fuente de Cantos",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de Colón",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Siruela",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Trujillanos",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Recinto Ferial - Plaza Felipe Trigo",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Villanueva del Fresno",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Hernán Cortés",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Zalamea de la Serena",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Villanueva de la Serena",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Recinto Ferial - Ronda de la Hispanidad",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Los Santos de Maimona",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Doctor Fernández Santana",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Villafranca de los Barros",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Villafranca de los Barros",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Fuenlabrada de los Montes",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Calle Reyes Católicos",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Orellana la Vieja",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Plaza de España",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Olivenza",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Recinto Ferial - Avenida Antonio Ortiz Cordero",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Lobón",
-     "Dia de Mercadillo": "Sábado",
-     "Ubicación": "Parque de la Constitución",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
-    },
-    {
-     "Nombre": "Mercadillo de Puebla de Sancho Pérez",
-     "Dia de Mercadillo": "Domingo",
-     "Ubicación": "Puebla de Sancho Pérez",
-     "Comunidad": "Extremadura",
-     "Provincia": "BADAJOZ"
+      "Nombre": "Mercadillo de Ahigal",
+      "Dia de Mercadillo": "Domingo",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Mayor - Avda. de los Caidos",
+      "Horario": "",
+      "Puestos": 200,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Alcuéscar",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle San Juan",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Aliseda",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Extremadura",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Almaraz",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Miguel de Cervantes",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Almoharin",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Arroyo de  la Luz",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza del Divino Morales",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Baños de Montemayor",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Mayo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Brozas",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Principe de Asturias",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Cabezuela del Valle",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Extremadura",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Cáceres",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Fausto Picapiedra",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": 250,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Cáceres",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Ronda del Carmen",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Cáceres",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Aldea Moret - Barrio de la Abundancia",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Caminomorisco",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Junto a la gasolinera",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Campo Lugar",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Campo Lugar",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Cañamero",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Santo Domingo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Carcaboso",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Casar de Cáceres",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Casar de Palomero",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Mayor",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Casatejada",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Alameda",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Coria",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Brasil",
+      "Horario": "",
+      "Puestos": 100,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Garrovillas de Alconétar",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Gata",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Guadalupe",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Poeta Ángel Marina",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Hervás",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Jesús Sánchez Rodriguez",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Jarandilla de la Vera",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Jarandilla de la Vera",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Jerte",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Independencia",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Losar de la Vera",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Losar de la Vera",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Madrigal de la Vera",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle del Cerrillo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Madrigalejo",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Encobradero",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Madroñera",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Abastos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Malpartida de Cáceres",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Nora",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Malpartida de Plasencia",
+      "Dia de Mercadillo": "Domingo",
+      "Tipo": "Generalista",
+      "Ubicación": "Paseo de Extremadura",
+      "Horario": "",
+      "Puestos": 140,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Miajadas",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Cervantes",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Miajadas",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Cervantes",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Montánchez",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Amador Diaz",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Montehermoso",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Montehermoso",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Moraleja",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Ronda del Foso",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Navalmoral de la Mata",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Eras del Cerro",
+      "Horario": "",
+      "Puestos": 180,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Navas del Madroño",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Pinofranqueado",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle del Obispo Jarrin",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Pinofranqueado",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle del Obispo Jarrin",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Pizarra",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Hispanidad",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Pizarra",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Hispanidad",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Pizarra",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Hispanidad",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Plasencia",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida de la Hispanidad",
+      "Horario": "",
+      "Puestos": 140,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Serradilla",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Sierra de Fuentes",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Trujillo",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Fernán Ruiz",
+      "Horario": "",
+      "Puestos": 160,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valdefuentes",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valdefuentes",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valdesalor",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valencia de Alcántara",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valencia de Alcántara",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Valverde del Fresno",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Ermita del Espiritu Santo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Villanueva de la Vera",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle San Justo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Zarza la Mayor",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Mayor",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Zorita",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Real",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "CACERES"
+    },
+    {
+      "Nombre": "Mercadillo de Alange",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Castillejo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Almendralejo",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial - Avenida A Rúa",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": 200,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Arroyo de San Serván",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Entre campo de deportes y piscina",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Azuaga",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Azuaga",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Badajoz",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Emigrante Pacense, 06011 Badajoz",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": 200,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Berlanga",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza del mercado de abastos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Bienvenida",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Altozano",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Burguillos del Cerro",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Abastos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Burguillos del Cerro",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Abastos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Cabeza del Buey",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de San Vicente",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Cabeza la Vaca",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Carretera de Calera de León",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Calañas",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "La Zarza",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Calañas",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "La Zarza",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Campanario",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Camino de la Laguna",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Campillo de Llerena",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Abastos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Casas de Don Pedro",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Sagrado Corazón de Jesús",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Castuera",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Parque Félix Rodriguez de la Fuente",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Don Benito",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida Alonso Martin",
+      "Horario": "",
+      "Puestos": 155,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de el Nevero- Badajoz",
+      "Dia de Mercadillo": "Domingos",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Federico Mayor Zaragoza",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": 200,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Fregenal de la Sierra",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Orihuela Grande",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Fuenlabrada de los Montes",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Paseo de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Fuenlabrada de los Montes",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Reyes Católicos",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Fuente de Cantos",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Colón",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Fuente del Maestre",
+      "Dia de Mercadillo": "Viernes y Sábados",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Gran Maestre",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Garbayuela",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Garbayuela",
+      "Horario": "",
+      "Puestos": 20,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Guareña",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Guareña",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Higuera la Real",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida de Portugal",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Jerez de los Caballeros",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Santiago",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de La Albuera",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida General Castaño",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de La Haba",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida de Extremadura",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de La Nava de Santiago",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle de Enmedio",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de La Roca de la Sierra",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Llerena",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle del Arrabal de San Francisco",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Lobón",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Parque de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Los Santos de Maimona",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Doctor Fernández Santana",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Medellin",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Zona Playa de Medellin",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Medina de las Torres",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Cristo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Mérida",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial - Avenida José Fernández López",
+      "Horario": "De 9:00 a 14:00",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Mirandilla",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Reina Sofia",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Mirandilla",
+      "Dia de Mercadillo": "Sábado y Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Reina Sofia",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Montemolin",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Montemolin",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Montemolin",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Montijo",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida Europa",
+      "Horario": "De 9:30 a 14:00",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Navalvillar de Pela",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza del Emigrante",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Oliva de la Frontera",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Olivenza",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial - Avenida Antonio Ortiz Cordero",
+      "Horario": "",
+      "Puestos": 76,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Orellana la Vieja",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Puebla de la Calzada",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Puebla de Sancho Pérez",
+      "Dia de Mercadillo": "Domingo",
+      "Tipo": "Generalista",
+      "Ubicación": "Puebla de Sancho Pérez",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Quintana de la Serena",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Ribera del Fresno",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle de la Fuente",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Salvaleón",
+      "Dia de Mercadillo": "Jueves y Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Leganés",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Salvaleón",
+      "Dia de Mercadillo": "Sábado y Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de Leganés",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de San Pedro de Mérida",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Las Peñas",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de San Vicente de Alcántara",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Parque de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Santa Amalia",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Avenida de Valdehornillo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Santa Marta de los Barros",
+      "Dia de Mercadillo": "Viernes",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Siruela",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Talarrubias",
+      "Dia de Mercadillo": "Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle La Paz",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Talarrubias",
+      "Dia de Mercadillo": "Viernes y Martes",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle La Paz",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Talavera la Real",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Paseo Virgen de Gracia",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Trujillanos",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial - Plaza Felipe Trigo",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Usagre",
+      "Dia de Mercadillo": "Jueves",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Rodriguez de la Fuente",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Valdecaballeros",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Valdecaballeros",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Valle de la Serena",
+      "Dia de Mercadillo": "Lunes",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de España",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Valverde de Leganés",
+      "Dia de Mercadillo": "Miércoles",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza Antonio Asensio Romero",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Villafranca de los Barros",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Villafranca de los Barros",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Villanueva de la Serena",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Recinto Ferial - Ronda de la Hispanidad",
+      "Horario": "",
+      "Puestos": 160,
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Villanueva del Fresno",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Calle Hernán Cortés",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
+    },
+    {
+      "Nombre": "Mercadillo de Zalamea de la Serena",
+      "Dia de Mercadillo": "Sábado",
+      "Tipo": "Generalista",
+      "Ubicación": "Plaza de la Constitución",
+      "Horario": "",
+      "Puestos": "",
+      "Descripción": "",
+      "Comunidad": "Extremadura",
+      "Provincia": "BADAJOZ"
     }
-   ]
+  ]

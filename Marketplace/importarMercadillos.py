@@ -13,19 +13,9 @@ django.setup()
 with open('Marketplace/data/ferias_y_mercadillos.json', encoding='utf-8') as json_file:
     data = json.load(json_file)
 
-gmaps = googlemaps.Client(key='AIzaSyDC7r4PCzv8FSMXhcqXKFLXObpn2t-ZyyI')
 
 from Marketplace.models import FeriaMercadillo, Provincia, ComunidadAutonoma
 
-def get_location(address):
-    geocode_result = gmaps.geocode(address)
-    if geocode_result:
-        lat = geocode_result[0]['geometry']['location']['lat']
-        lon = geocode_result[0]['geometry']['location']['lng']
-        return lat, lon
-    else:
-        return None, None
-    
 def get_comunidad_autonoma(name):
     comunidad = ComunidadAutonoma.objects.filter(nombre=name).first()
     return comunidad
@@ -33,9 +23,8 @@ def get_comunidad_autonoma(name):
 for row in data:
     address = f"{row['Ubicación']}, {row['Provincia']}, Spain"
     print(address)
-    lat, lon = get_location(address)
     
-    provincia = Provincia.objects.filter(provincia=row['Provincia']).first()    
+    provincia = Provincia.objects.filter(provincia=row['Provincia']).first()
     comunidad = get_comunidad_autonoma(row.get("Comunidad", None))
 
     nombre = row.get("Nombre", None)
@@ -45,8 +34,12 @@ for row in data:
     horario = row.get("Horario", None)
     puestos = row.get("Puestos", None)
     descripcion = row.get("Descripción", None)
-    
 
+    if isinstance(puestos, str) and puestos.isdigit():
+        num_puestos_fm = int(puestos)
+    else:
+        num_puestos_fm = None
+    
     if provincia is not None:
         feria_mercadillo = FeriaMercadillo(
             nombre_fm=nombre,
@@ -55,10 +48,8 @@ for row in data:
             provincia_fm=provincia,
             ubicación_fm=ubicacion,
             horario_fm=horario,
-            num_puestos_fm=puestos,
+            num_puestos_fm=num_puestos_fm,
             descripción_fm=descripcion,
             ccaa_fm=comunidad,
-            latitude_fm=lat,
-            longitude_fm=lon,
         )
         feria_mercadillo.save()

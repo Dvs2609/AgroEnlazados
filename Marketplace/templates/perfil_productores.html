@@ -25,7 +25,7 @@
               </div>
               <div id="productos_container">
                 {% for producto in object.productos_prod.all %}
-                  <p class="ml-2"><span id="productos_prod">{{ producto.nombre }}</span> 
+                  <p class="ml-2 mt-2"><span id="productos_prod">{{ producto.nombre }}</span> 
                   <button class="border-delete-button" id="delete_productos_prod" data-pk="{{ object.pk }}" data-producto-id="{{ producto.id }}"><i class="fas fa-trash-alt"></i></button>
                 </p>
                 {% endfor %}
@@ -70,7 +70,7 @@
                 <button class="border-add-button ml-4" id="addTiendaBtn" data-tipo-venta-id="3"><i class="fas fa-plus"></i></button>
               </div>
               {% for tienda in object.tiendas_prod %}
-              <p class="ml-2"><span id="tiendas_prod">{{ tienda }}</span> 
+              <p class="ml-2 mt-2"><span id="tiendas_prod">{{ tienda }}</span> 
                 <button class="border-edit-button editDireccionBtn"
                     data-productor-id="{{ productor.id }}"    
                     data-direccion-id="{{ tienda.id }}"
@@ -95,7 +95,7 @@
                 <button class="border-add-button ml-4" id="addDireccionBtn" data-tipo-venta-id="1"><i class="fas fa-plus"></i></button>
               </div>
               {% for direccion in object.direcciones_prod %}
-                <p class="ml-2">
+                <p class="ml-2 mt-2">
                   <span id="direccion_prod">{{ direccion }}</span>
                   <button class="border-edit-button editDireccionBtn" 
                       data-productor-id="{{ productor.id }}"    
@@ -123,7 +123,7 @@
                 </div>
                 <div id="ferias_mercadillos_container">
                     {% for mercadillo in object.mercadillo_prod %}
-                        <p class="ml-2"><span id="ferias_mercadillos_prod">{{ mercadillo.nombre_fm }}</span>
+                        <p class="ml-2 mt-2"><span id="ferias_mercadillos_prod">{{ mercadillo.nombre_fm }}</span>
                         </button><button class="border-delete-button" id="delete_mercadillo_{{ mercadillo.id_fm }}" data-productor-id="{{ productor.id }}" data-mercadillo-id="{{ mercadillo.id_fm }}">
                           <i class="fas fa-trash-alt"></i>
                         </button>
@@ -140,8 +140,8 @@
                     <button class="border-add-button ml-4" id="add_url_button" data-pk="{{ object.pk }}"><i class="fas fa-plus"></i></button>
                 </div>
                 {% for link in object.link_webs_prod %}
-                <p class="ml-2">
-                    <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+                <p class="ml-2 mt-2">
+                    <a href="{{ link.url }}" target="_blank"  style="word-break: break-all;">{{ link.url }}</a>
                     <button class="border-delete-button delete-url-button" id="delete_link_{{ link.id }}" data-productor-id="{{ object.pk }}" data-link-id="{{ link.id }}">
                         <i class="fas fa-trash-alt"></i>
                     </button>
@@ -155,28 +155,28 @@
         {% else %}
         {% if object.tipos_venta.all %}
             <p class="bold-txt">Tipos de venta: </p>
-            <p class="ml-2">{{ object.tipos_venta.all|join:", " }}</p>
+            <p class="ml-2 mt-2">{{ object.tipos_venta.all|join:", " }}</p>
         {% endif %}
         {% if object.tiendas_prod.all %}
             <p class="bold-txt">Tiendas: </p>
             {% for tienda in object.tiendas_prod.all %}
-            <p class="ml-2">{{ tienda }}</p>
+            <p class="ml-2 mt-2">{{ tienda }}</p>
             {% endfor %}
         {% endif %}
         {% if object.direcciones_prod.all %}
             <p class="bold-txt">Dirección: </p>
             {% for direccion in object.direcciones_prod.all %}
-            <p class="ml-2">{{ direccion }}</p>
+            <p class="ml-2 mt-2">{{ direccion }}</p>
             {% endfor %}
         {% endif %}
         {% if object.ferias_mercadillos.all %}
             <p class="bold-txt">Ferias y Mercadillos: </p>
-            <p class="ml-2">{{ object.ferias_mercadillos.all|join:", " }}</p>
+            <p class="ml-2 mt-2">{{ object.ferias_mercadillos.all|join:", " }}</p>
         {% endif %}
         {% if object.link_webs_prod %}
             <p class="bold-txt">Link Webs: </p>
             {% for link in object.link_webs_prod %}
-            <p class="ml-2"><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
+            <p class="ml-2 mt-2"><a href="{{ link.url }}" target="_blank">{{ link.url }}</a></p>
             {% endfor %}
         {% endif %}
         {% endif %}
@@ -222,19 +222,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <form class="encuestaComunicacionModal-form" action="{% url 'encuesta_comunicacion' %}" method="post">
-          {% csrf_token %}
-          {% for field in encuesta_comunicacion_form %}
-            <div class="form-group">
-              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
-              {{ field }}
-            </div>
-          {% endfor %}
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary submit-encuestaComunicacionModal-form">Guardar</button>
+        <div class="container-fluid">
+          <form class="encuestaComunicacionModal-form" action="{% url 'encuesta_comunicacion' %}" method="post">
+            {% csrf_token %}
+            {% for field in encuesta_comunicacion_form %}
+              <div class="form-group">
+                <label for="{{ field.auto_id }}">{{ field.label }}</label>
+                {{ field }}
+              </div>
+            {% endfor %}
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary submit-encuestaComunicacionModal-form">Guardar</button>
+        </div>
       </div>
     </div>
   </div>
@@ -256,7 +258,7 @@
           {% csrf_token %}
           {% for field in encuesta_registro_venta_directa_form %}
             <div class="form-group">
-              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
+              <label for="{{ field.auto_id }}">{{ field.label }}</label>
               {{ field }}
             </div>
           {% endfor %}
@@ -285,7 +287,7 @@
           {% csrf_token %}
           {% for field in encuesta_mercadillos_form %}
             <div class="form-group">
-              <label style="width: 800px;" for="{{ field.auto_id }}">{{ field.label }}</label>
+              <label for="{{ field.auto_id }}">{{ field.label }}</label>
               {{ field }}
             </div>
           {% endfor %}
@@ -656,7 +658,9 @@
     });
   }
   document.getElementById("add_productos_prod").addEventListener("click", function () {
-      // Crea el formulario para añadir un nuevo producto
+    // Desactiva el botón para evitar múltiples clics
+    this.disabled = true  
+    // Crea el formulario para añadir un nuevo producto
       var form = document.createElement("form");
       form.innerHTML = `
       <div class="form-group">
@@ -676,6 +680,8 @@
       var cancelButton = document.getElementById("cancel-button");
       cancelButton.addEventListener("click", function () {
         container.removeChild(form);
+        // Reactiva el botón cuando se cierra el formulario
+        document.getElementById("add_productos_prod").disabled = false;
       });
       // Agrega un event listener al campo de texto
       var nombreInput = document.getElementById("nombre");
@@ -772,7 +778,9 @@
   makeEditable('cp_prod', 'edit_cp_prod', '{% url "actualizar_cp_prod" object.pk %}', '{{ csrf_token }}');
 
   document.getElementById("add_url_button").addEventListener("click", function () {
-      // Crea el formulario para añadir una nueva URL
+      
+    this.disabled = true;
+    // Crea el formulario para añadir una nueva URL
       var form = document.createElement("form");
       form.innerHTML = `
       <div class="form-group">
@@ -786,6 +794,13 @@
       // Agrega el formulario a la página
       var container = document.getElementById("url_container");
       container.appendChild(form);
+      // Agrega un event listener al botón de cancelar
+      var cancelButton = document.getElementById("cancel-button");
+      cancelButton.addEventListener("click", function () {
+        container.removeChild(form);
+        // Reactiva el botón cuando se cierra el formulario
+        document.getElementById("add_url_button").disabled = false;
+      });
 
       // Cuando se envía el formulario, hace una petición POST al servidor
       form.addEventListener("submit", function (event) {
@@ -812,13 +827,7 @@
           });
       });
 
-      // Agrega un event listener al botón de cancelar
-      var cancelButton = document.getElementById("cancel-button");
-      cancelButton.addEventListener("click", function () {
-        // Aquí puedes poner el código para cancelar la adición de una URL
-        // Por ejemplo, podrías remover el formulario
-        form.remove();
-      });
+     
   });
 
   document.querySelectorAll(".delete-url-button").forEach(function (button) {
@@ -858,6 +867,8 @@
   });
   
   document.getElementById("add_ferias_mercadillos_prod").addEventListener("click", function () {
+    
+    this.disabled = true;
     // Crea el formulario para añadir un nuevo feria o mercadillo
     var form = document.createElement("form");
     form.innerHTML = `
@@ -878,6 +889,7 @@
   var cancelButton = document.getElementById("cancel-button-mercadillo");
   cancelButton.addEventListener("click", function () {
     container.removeChild(form);
+    document.getElementById("add_ferias_mercadillos_prod").disabled = false;
   });
     // Agrega un event listener al campo de texto
     var nombreInput = document.getElementById("nombre_mercadillo");

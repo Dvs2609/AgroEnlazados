@@ -32,6 +32,36 @@ body {
     margin-top: 20px;
 }
 
+
+
+@media only screen and (max-width: 992px) {
+    
+    .icon-circle {
+        width: 160px!important;
+        height: 160px!important;
+    }
+    .icon-circle .fas {
+        font-size: 5em;
+    }
+    .link-container {
+        margin-top: 50px; /* Ajusta este valor según lo necesites */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .icon-circle {
+        width: 140px!important;
+        height: 140px!important;
+    }
+    .icon-circle .fas {
+        font-size: 4em;
+    }
+    .link-container {
+        margin-top: 50px; 
+    }
+    
+}
+
 /* FIN INICIO */
 
 
@@ -157,27 +187,69 @@ th a {
 .encuestas-section {
     padding: 20px;
     background-color: #fff;
-  }
-  
-  .encuestas-container {
+}
+
+.encuestas-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .encuesta {
+}
+
+.encuesta {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .encuesta h3 {
+    margin-bottom: 20px;
+}
+
+.encuesta h3 {
     margin-bottom: 10px;
-  }
-  
-  .encuesta button {
+}
+
+.encuesta button {
     margin-top: 10px;
-  }
+}
+
+@media only screen and (min-width: 768px) {
+    .encuestas-container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .modal-dialog {
+        max-width: 600px;
+    }
+}
+
+.modal-content {
+    word-wrap: break-word;
+}
+
+.modal-content p, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6 {
+    max-width: 100%;
+}
+
+/* Reglas CSS para pantallas de tamaño grande (por ejemplo, desktop) */
+@media (min-width: 1200px) {
+    .modal-content p, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6 {
+        font-size: 1.5em; /* Ajusta el tamaño del texto a tu gusto */
+    }
+}
+
+/* Reglas CSS para pantallas de tamaño medio (por ejemplo, tablet) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .modal-content p, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6 {
+        font-size: 1.2em; /* Ajusta el tamaño del texto a tu gusto */
+    }
+}
+
+/* Reglas CSS para pantallas de tamaño pequeño (por ejemplo, móvil) */
+@media (max-width: 767px) {
+    .modal-content p, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6 {
+        font-size: 1em; /* Ajusta el tamaño del texto a tu gusto */
+    }
+}
 /*FIN PERFIL*/

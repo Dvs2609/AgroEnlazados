@@ -60,7 +60,7 @@ class FeriaMercadillo(models.Model):
     días_fm = models.CharField(max_length=100)
     tipo_fm = models.CharField(max_length=100, null=True)
     provincia_fm = models.ForeignKey(Provincia, on_delete=models.CASCADE)
-    ubicación_fm = models.CharField(max_length=200)
+    ubicación_fm = models.CharField(max_length=300)
     horario_fm = models.CharField(max_length=100, null=True)
     num_puestos_fm = models.IntegerField(null=True)
     descripción_fm = models.TextField(null=True)

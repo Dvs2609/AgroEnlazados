@@ -81,7 +81,7 @@ WSGI_APPLICATION = "AgroEnlazados.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'marketplace_db',
@@ -90,8 +90,8 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
-}
-"""DATABASES = {
+}"""
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME'),
@@ -100,7 +100,7 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
     }
-}"""
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

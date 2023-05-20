@@ -47,7 +47,7 @@
                 <div class="navbar-nav ml-auto d-none d-lg-block"> <!-- versión de escritorio -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i> {{ request.user.username }}
+                            <i class="fas fa-user mr-3"></i> {{ request.user.username }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'perfil_productor' nombre=request.user.provincia_prod pk=request.user.pk %}">Mi perfil</a>
@@ -66,7 +66,7 @@
             {% else %}
             <div class="navbar-nav ml-auto d-none d-lg-block">
                 <a href="{% url 'login' %}" class="nav-item nav-link mx-2">
-                 <i class="fas fa-user "></i>
+                 <i class="fas fa-user ml-5"></i>
                 </a>
             </div>
             <div class="navbar-nav ml-auto d-block d-lg-none">

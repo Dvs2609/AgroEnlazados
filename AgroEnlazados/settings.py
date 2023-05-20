@@ -91,7 +91,7 @@ WSGI_APPLICATION = "AgroEnlazados.wsgi.application"
         'PORT': '5432',
     }
 }"""
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('DB_NAME'),
@@ -100,8 +100,17 @@ DATABASES = {
         'HOST': os.getenv('DB_HOST'),
         'PORT': os.getenv('DB_PORT'),
     }
+}"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'marketplace_db',
+        'USER': 'Dvs2609',
+        'PASSWORD': 'masteruser1234asdf',
+        'HOST': 'dbdiegopfg.cdezbwfgengb.eu-west-3.rds.amazonaws.com',
+        'PORT': '5432',
+    }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 

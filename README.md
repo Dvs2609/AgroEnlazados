@@ -1,10 +1,71 @@
 # AGROENLAZADOS
 
+## Tabla de Contenidos
+
+- [AGROENLAZADOS](#agroenlazados)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Descripción del proyecto](#descripción-del-proyecto)
+  - [Manual de implementación](#manual-de-implementación)
+  - [Acceso desde un navegador a la aplicación](#acceso-desde-un-navegador-a-la-aplicación)
+  - [Manual de Usuario](#manual-de-usuario)
+    - [Elección de provincia/comunidad para entrar en AgroEnlazados](#elección-de-provinciacomunidad-para-entrar-en-agroenlazados)
+    - [Login](#login)
+    - [Registro](#registro)
+    - [Inicio y redirecciones de inicio](#inicio-y-redirecciones-de-inicio)
+    - [Tipos de venta](#tipos-de-venta)
+    - [Tipos de venta](#tipos-de-venta-1)
+    - [Navbar](#navbar)
+    - [Filtros para tablas](#filtros-para-tablas)
+    - [Mapa](#mapa)
+    - [Tabla y paginado](#tabla-y-paginado)
+    - [Perfil del productor](#perfil-del-productor)
+    - [Footer](#footer)
+
 ## Descripción del proyecto
 Breve descripción del proyecto y su propósito.
 
 ## Manual de implementación
-A continuación se describe como descargar e implementar el proyecto en un nuevo dispositivo.
+Este manual cubrirá la implementación de la aplicación con Docker y Docker Compose. Antes de comenzar, asegúrate de tener instalado Docker y Docker Compose en tu máquina. Si aún no los has instalado, puedes seguir las instrucciones en los siguientes enlaces:
+  - [Instalar Docker](https://docs.docker.com/engine/install/)
+  - [Instalar Docker-compose](https://docs.docker.com/compose/install/)
+
+Una vez instalado Docker y Docker Compose, puedes seguir los siguientes pasos para implementar la aplicación:
+
+1. Clonar el repositorio
+   Lo primero que necesitas hacer es clonar el repositorio de la aplicación a tu máquina local:
+
+   ```bash
+   git clone [URL del repositorio]
+   cd [nombre del repositorio]
+
+2. Construir la imagen de Docker
+    Después de clonar el repositorio, puedes construir la imagen de Docker utilizando el siguiente comando:
+
+    ```bash
+    docker-compose build
+    ```
+    Este comando leerá el archivo Dockerfile en el directorio actual y construirá la imagen de Docker para tu aplicación.
+
+3. Iniciar la aplicación
+    Una vez que la imagen de Docker se haya construido con éxito, puedes iniciar la aplicación con el siguiente comando:
+
+    ```bash
+    docker-compose up
+    ```
+    Este comando iniciará todos los servicios definidos en tu archivo docker-compose.yml, incluyendo tu aplicación web y la base de datos.
+
+4. Cargar los datos iniciales
+    Para cargar los datos iniciales a la base de datos, puedes utilizar el siguiente comando:
+
+    ```bash
+    docker-compose exec web python manage.py loaddata datadump_utf8.json
+    ```
+    Este comando ejecuta la carga de datos en el contenedor web.
+    Ahora, tu aplicación debería estar en funcionamiento y puedes acceder a ella desde tu navegador en http://localhost:8000.
+
+## Acceso desde un navegador a la aplicación
+AgroEnlazados esta alojado temporalmente en un servidor de AWS.
+Puede ser accesible desde el navegador utilizando la siguiente url: http://13.37.220.142:8000/
 
 ## Manual de Usuario
 A continuación se describe el funcionamiento y las características principales de AgroEnlazados.

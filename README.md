@@ -22,7 +22,15 @@
     - [Footer](#footer)
 
 ## Descripción del proyecto
-Breve descripción del proyecto y su propósito.
+AgroEnlazados es una plataforma de Marketplace destinada a facilitar la comunicación y la transacción entre productores y consumidores de productos agrícolas a nivel local. El proyecto surge de la necesidad identificada de reducir los intermediarios en el sector agroalimentario y aumentar la eficiencia y rentabilidad para los productores, al tiempo que proporciona a los consumidores acceso directo a productos frescos y de calidad.
+
+AgroEnlazados tiene como objetivo ser un centro de información para productores y consumidores. La plataforma pretende presentar información detallada y transparente sobre los productores y los productos que ofrecen, incentivando elecciones de compra más informadas por parte de los consumidores y favoreciendo un precio más justo para los productores.
+
+Además, AgroEnlazados tiene como objetivo incentivar la colaboración entre productores y fomentar la venta de productos de temporada, ayudando a los productores a aumentar sus ingresos y a promover sus productos y tiendas.
+
+Aunque el proyecto presenta múltiples beneficios, también reconoce y aborda los riesgos potenciales asociados al funcionamiento de la plataforma, como el fraude por parte de los productores, incumplimiento de las normativas, competencia desleal, fallos técnicos, y efectos en cooperativas y empresas debido a la eliminación de intermediarios.
+
+Este proyecto es un trabajo en progreso, y cualquier contribución o sugerencia es bienvenida.
 
 ## Manual de implementación
 Este manual cubrirá la implementación de la aplicación con Docker y Docker Compose. Antes de comenzar, asegúrate de tener instalado Docker y Docker Compose en tu máquina. Si aún no los has instalado, puedes seguir las instrucciones en los siguientes enlaces:
